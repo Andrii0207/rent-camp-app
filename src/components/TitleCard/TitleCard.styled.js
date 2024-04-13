@@ -1,9 +1,16 @@
 import styled from '@emotion/styled';
 
+export const TitleWrapper = styled.div`
+width: 526px;
+margin-bottom: 24px;
+`
+
+
 export const StyledHeader = styled.header`
 display: flex;
 justify-content: space-between;
 align-items: center;
+margin-bottom: 8px;
 
 `
 export const CardTitle = styled.h2`
@@ -44,7 +51,7 @@ padding-right: 16px;
 `
 
 export const Location = styled.div`
-color: #101828;
+color: ${props => props.theme.colors.primary};;
 
 font-family: Inter;
 font-size: 16px;

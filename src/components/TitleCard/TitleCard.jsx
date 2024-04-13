@@ -8,11 +8,12 @@ import {
   Location,
   LocationWrapper,
   RatingLocationWrapper,
+  TitleWrapper,
 } from './TitleCard.styled';
 
 export default function TitleCard() {
   return (
-    <>
+    <TitleWrapper>
       <StyledHeader>
         <div>
           <CardTitle>Title</CardTitle>
@@ -40,6 +41,6 @@ export default function TitleCard() {
           </Location>
         </LocationWrapper>
       </RatingLocationWrapper>
-    </>
+    </TitleWrapper>
   );
 }

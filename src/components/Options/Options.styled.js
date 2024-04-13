@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export const OptionList = styled.ul`
 display: flex;
-padding: 12px 18px;
+flex-wrap: wrap;
 align-items: center;
 gap: 8px;
 margin-bottom: 24px;

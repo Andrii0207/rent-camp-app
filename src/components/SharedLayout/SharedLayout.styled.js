@@ -1,8 +1,8 @@
+import styled from '@emotion/styled'
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
 
 export const StyledLink = styled(NavLink)`
 &.active {
-    color: orange;
+    color: ${props => props.theme.colors.red};
 }
 `
