@@ -5,21 +5,20 @@ import {
   RatingWrapper,
   Reviews,
   StyledHeader,
-  Location,
   LocationWrapper,
   RatingLocationWrapper,
   TitleWrapper,
 } from './TitleCard.styled';
 
-export default function TitleCard() {
+export default function TitleCard({ title, price, rating, location, reviews }) {
   return (
     <TitleWrapper>
       <StyledHeader>
         <div>
-          <CardTitle>Title</CardTitle>
+          <CardTitle>{title}</CardTitle>
         </div>
         <PriceWrapper>
-          <Price>$ 8000.00</Price>
+          <Price>$ {price.toFixed(2).toString().replace('.', ',')}</Price>
           <div>
             <p>heart-icon</p>
           </div>
@@ -31,14 +30,17 @@ export default function TitleCard() {
             <div>star-icon</div>
           </li>
           <li>
-            <Reviews>(2 Reviews)</Reviews>
+            <Reviews>
+              {rating}({reviews.length} Reviews)
+            </Reviews>
           </li>
         </RatingWrapper>
+
         <LocationWrapper>
-          <div>location-icon</div>
-          <Location>
-            <a href="qwe">Kyiv, Ukraine</a>
-          </Location>
+          <li>
+            <p>location-icon</p>
+          </li>
+          <li>{location}</li>
         </LocationWrapper>
       </RatingLocationWrapper>
     </TitleWrapper>

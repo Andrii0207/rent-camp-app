@@ -5,12 +5,13 @@ import { InfoCardWrapper, WrapperCard } from './Card.styled';
 import { Description } from 'components/Description/Description';
 import { CardPhoto } from 'components/CardPhoto/CardPhoto';
 
-export default function Card() {
+export default function Card({ entity }) {
+  const { name, price, rating, location, reviews } = entity;
   return (
     <>
       <WrapperCard>
         <InfoCardWrapper>
-          <TitleCard />
+          <TitleCard title={name} price={price} rating={rating} location={location} reviews={reviews} />
           <Description />
           <Options />
           <ShowMore />

@@ -60,7 +60,7 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 `
 
-export const LocationWrapper = styled.div`
+export const LocationWrapper = styled.ul`
 display: flex;
 align-items: center;
 `
