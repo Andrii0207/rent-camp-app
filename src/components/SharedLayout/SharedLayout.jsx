@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { StyledLink } from './SharedLayout.styled';
+import { Header, StyledLink } from './SharedLayout.styled';
 
 export function SharedLayout() {
   return (

@@ -1,25 +1,31 @@
 import { OptionItem, OptionList } from './Options.styled';
 
-export default function Options() {
+export default function Options({ camp }) {
+  const {
+    adults,
+    transmission,
+    engine,
+    details: { beds },
+  } = camp;
   return (
     <OptionList>
       <OptionItem>
-        <p>2 adults</p>
+        <p>{adults} adults</p>
       </OptionItem>
       <OptionItem>
-        <p>sutomatic</p>
+        <p>{transmission}</p>
       </OptionItem>
       <OptionItem>
-        <p>Petrol</p>
+        <p>{engine}</p>
       </OptionItem>
       <OptionItem>
-        <p>Kitchen</p>
+        <p> kitchen</p>
       </OptionItem>
       <OptionItem>
-        <p>1 beds</p>
+        <p>{beds} beds</p>
       </OptionItem>
       <OptionItem>
-        <p>AC</p>
+        <p> AC</p>
       </OptionItem>
     </OptionList>
   );

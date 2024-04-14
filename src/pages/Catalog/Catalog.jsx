@@ -7,7 +7,6 @@ import { selectAdverts } from '../../redux/selectors';
 
 export function Catalog() {
   const dispatch = useDispatch();
-
   const adverts = useSelector(selectAdverts);
 
   console.log('adverts', adverts);
@@ -19,7 +18,7 @@ export function Catalog() {
   return (
     <Wrapper>
       {adverts.map((item, index) => (
-        <Card key={index} entity={item} />
+        <Card key={index} data={item} />
       ))}
     </Wrapper>
   );

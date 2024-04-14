@@ -1,9 +1,9 @@
-import { PhotoWrapper } from './CardPhoto.styled';
+import { PhotoWrapper, StyledPhoto } from './CardPhoto.styled';
 
-export function CardPhoto() {
+export function CardPhoto({ gallery }) {
   return (
     <PhotoWrapper>
-      <p>photo</p>
+      <StyledPhoto src={gallery[0]} alt="camp_photo" />
     </PhotoWrapper>
   );
 }

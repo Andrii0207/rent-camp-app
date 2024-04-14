@@ -3,8 +3,14 @@ import { getAdvertiseList } from "./operations";
 
 const advertsSlice = createSlice({
     name: "adverts",
-    initialState: { entity: [], isLoading: false, error: null },
-    reducers: {},
+    initialState: { entity: [], isLoading: false, error: null, options: [] },
+    // reducers: {
+    //     updateOptions: {
+    //         reducer(state, { payload }) {
+    //             state.options.push(payload)
+    //         }
+    //     }
+    // },
     extraReducers: builder => {
         builder
             .addCase(getAdvertiseList.pending, (state, _) => {
@@ -21,5 +27,5 @@ const advertsSlice = createSlice({
     }
 })
 
-
+// export const { updateOptions } = createSlice.actions;
 export const advertsReducer = advertsSlice.reducer;

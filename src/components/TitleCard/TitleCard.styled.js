@@ -50,6 +50,14 @@ align-items: center;
 padding-right: 16px;
 `
 
+export const StyledItem = styled.li`
+margin-right: 4px;
+`
+
+export const StyledStarIcon = styled.img`
+background-color: ${props => props.theme.colors.yellow};
+`
+
 export const Location = styled.div`
 color: ${props => props.theme.colors.primary};;
 

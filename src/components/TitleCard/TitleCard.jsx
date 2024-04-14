@@ -8,27 +8,32 @@ import {
   LocationWrapper,
   RatingLocationWrapper,
   TitleWrapper,
+  StyledStarIcon,
+  StyledItem,
 } from './TitleCard.styled';
+import StarIcon from 'images/icons/star.png';
+import HeartIcon from 'images/icons/heart.png';
+import LocationIcon from 'images/icons/location.png';
 
-export default function TitleCard({ title, price, rating, location, reviews }) {
+export default function TitleCard({ entity: { price, rating, location, reviews, name } }) {
   return (
     <TitleWrapper>
       <StyledHeader>
         <div>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle>{name}</CardTitle>
         </div>
         <PriceWrapper>
           <Price>$ {price.toFixed(2).toString().replace('.', ',')}</Price>
           <div>
-            <p>heart-icon</p>
+            <img src={HeartIcon} alt="favorite heart icon" />
           </div>
         </PriceWrapper>
       </StyledHeader>
       <RatingLocationWrapper>
         <RatingWrapper>
-          <li>
-            <div>star-icon</div>
-          </li>
+          <StyledItem>
+            <StyledStarIcon src={StarIcon} alt="rating icon" />
+          </StyledItem>
           <li>
             <Reviews>
               {rating}({reviews.length} Reviews)
@@ -37,9 +42,9 @@ export default function TitleCard({ title, price, rating, location, reviews }) {
         </RatingWrapper>
 
         <LocationWrapper>
-          <li>
-            <p>location-icon</p>
-          </li>
+          <StyledItem>
+            <img src={LocationIcon} alt="location icon" />
+          </StyledItem>
           <li>{location}</li>
         </LocationWrapper>
       </RatingLocationWrapper>
