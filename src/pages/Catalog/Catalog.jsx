@@ -12,15 +12,18 @@ export function Catalog() {
   console.log('adverts', adverts);
 
   const [isShowModal, setShowModal] = useState(false);
-  const [modaImg, setModalImg] = useState('');
+  const [modalData, setModalData] = useState('');
 
-  const handleOpenModal = () => {
+  const handleOpenModal = data => {
+    console.log('openModal >>', data);
     setShowModal(true);
+    setModalData(data);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = data => {
+    console.log('handleCloseModal >>', data);
     setShowModal(false);
-    setModalImg('');
+    setModalData('');
   };
 
   useEffect(() => {
@@ -30,12 +33,11 @@ export function Catalog() {
   return (
     <>
       <Wrapper>
-        {adverts.map(item => {
-          const { id } = item;
-          return <Card key={id} data={item} openModal={handleOpenModal} />;
-        })}
+        {adverts.map((item, index) => (
+          <Card key={index} data={item} openModal={handleOpenModal} />
+        ))}
       </Wrapper>
-      {isShowModal && <Modal closeModal={handleCloseModal} />}
+      {isShowModal && <Modal closeModal={handleCloseModal} modalData={modalData} />}
     </>
   );
 }

@@ -28,5 +28,12 @@ export const theme = Object.freeze({
     fontStyle: {
         normal: "normal",
     },
+    breakpoints: {
+        xs: '320px',
+        s: '768px',
+        m: '1024px',
+        l: '1280px',
+        xl: '1440px',
+    },
 
 })

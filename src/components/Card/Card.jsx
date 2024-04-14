@@ -6,8 +6,7 @@ import { Description } from 'components/Description/Description';
 import { CardPhoto } from 'components/CardPhoto/CardPhoto';
 
 export default function Card({ data, openModal }) {
-  const { description, gallery, id } = data;
-  console.log('Card data >>', data);
+  const { description, gallery } = data;
 
   return (
     <>
@@ -15,8 +14,8 @@ export default function Card({ data, openModal }) {
         <InfoCardWrapper>
           <TitleCard entity={data} />
           <Description text={description} />
-          <Options camp={data} />
-          <ShowMore openModal={openModal} id={id} />
+          <Options campInfo={data} />
+          <ShowMore data={data} openModal={openModal} />
         </InfoCardWrapper>
         <CardPhoto gallery={gallery} />
       </WrapperCard>

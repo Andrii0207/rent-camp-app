@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { Overlay } from './Modal.styled';
 import { createPortal } from 'react-dom';
+import { ModaCardInfo } from 'components/ModaCardInfo/ModaCardInfo';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export function Modal({ closeModal }) {
+export function Modal({ closeModal, modalData }) {
+  console.log('Modal >>', modalData);
   useEffect(() => {
     const handlePressESC = e => {
       if (e.code === 'Escape') {
@@ -26,7 +28,7 @@ export function Modal({ closeModal }) {
   return createPortal(
     <Overlay onClick={handleOverlayClick}>
       <div>
-        <p>The overlay</p>
+        <ModaCardInfo data={modalData} />
       </div>
     </Overlay>,
     modalRoot

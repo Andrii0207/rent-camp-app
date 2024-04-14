@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 
 export const TitleWrapper = styled.div`
-width: 526px;
 margin-bottom: 24px;
+display: flex;
+align-items: baseline;
+justify-content: space-between;
 `
 
 

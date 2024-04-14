@@ -1,12 +1,12 @@
 import { OptionItem, OptionList } from './Options.styled';
 
-export default function Options({ camp }) {
+export default function Options({ campInfo }) {
   const {
     adults,
     transmission,
     engine,
     details: { beds },
-  } = camp;
+  } = campInfo;
   return (
     <OptionList>
       <OptionItem>

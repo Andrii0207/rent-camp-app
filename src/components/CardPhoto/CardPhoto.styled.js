@@ -1,14 +1,15 @@
 import styled from '@emotion/styled'
 
 export const PhotoWrapper = styled.div`
-min-width: 290px;
+width: 290px;
 height: 310px;
-border-radius: 10px;
-border: 1px solid ${props => props.theme.colors.lightGrey};
 background-size: cover;
+border-radius: 10px;
 `
 
 export const StyledPhoto = styled.img`
 border-radius: 10px;
 flex-shrink: 0;
+object-fit: cover;
+height: 310px;
 `   
