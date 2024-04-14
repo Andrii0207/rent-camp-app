@@ -3,7 +3,7 @@ import { getAdvertiseList } from "./operations";
 
 const advertsSlice = createSlice({
     name: "adverts",
-    initialState: { entity: [], isLoading: false, error: null, options: [] },
+    initialState: { entity: [], isLoading: false, error: null, },
     // reducers: {
     //     updateOptions: {
     //         reducer(state, { payload }) {

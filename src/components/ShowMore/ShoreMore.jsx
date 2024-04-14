@@ -1,5 +1,9 @@
 import { StyledButton } from './ShowMore.styled';
 
-export default function ShowMore() {
-  return <StyledButton type="button">Show more</StyledButton>;
+export default function ShowMore({ openModal }) {
+  return (
+    <StyledButton type="button" onClick={() => openModal()}>
+      Show more
+    </StyledButton>
+  );
 }
