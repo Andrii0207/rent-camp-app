@@ -1,5 +1,5 @@
 import Options from 'components/Options/Options';
-import ShowMore from 'components/ShowMore/ShoreMore';
+import Button from 'components/ShowMore/ShoreMore';
 import TitleCard from 'components/TitleCard/TitleCard';
 import { InfoCardWrapper, WrapperCard } from './Card.styled';
 import { Description } from 'components/Description/Description';
@@ -15,7 +15,7 @@ export default function Card({ data, openModal }) {
           <TitleCard entity={data} />
           <Description text={description} />
           <Options data={data} />
-          <ShowMore data={data} openModal={openModal} />
+          <Button data={data} openModal={openModal} />
         </InfoCardWrapper>
         <CardPhoto gallery={gallery} />
       </WrapperCard>

@@ -1,14 +1,13 @@
-import { FormWrapper } from './Form.styled';
+import { FormData, FormWrapper, StyledButton, Text, Title } from './Form.styled';
 
 export function Form() {
   return (
     <FormWrapper>
-      <Form action="">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="date" placeholder="Booking date" />
-        <textarea name="" id="" placeholder="Comment"></textarea>
-      </Form>
+      <Title>Book your campervan now</Title>
+      <Text>Stay connected! We are always ready to help you.</Text>
+      <FormData></FormData>
+
+      <StyledButton type="submit">Send</StyledButton>
     </FormWrapper>
   );
 }
