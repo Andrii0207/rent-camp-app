@@ -1,10 +1,19 @@
 import { Form } from 'components/Form/Form';
-import { ContainerWrapper } from './Features.styled';
+import { ContainerWrapper, OptionsWrapper } from './Features.styled';
+import { VehicleDetails } from 'components/VehicleDetals/VehicleDetails';
+import Options from 'components/Options/Options';
 
-export function Features() {
+export function Features({ data }) {
   return (
     <ContainerWrapper>
-      <p>features component</p>
+      <div>
+        <OptionsWrapper>
+          <Options data={data} />
+        </OptionsWrapper>
+        <div>
+          <VehicleDetails data={data} />
+        </div>
+      </div>
       <Form />
     </ContainerWrapper>
   );

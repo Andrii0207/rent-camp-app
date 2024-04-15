@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 export const FormWrapper = styled.div`
 /* display: flex; */
 /* flex-direction: column; */
-width: 448px;
+min-width: 448px;
 height: 532px;
 padding: 24px;
 border-radius: 20px;
@@ -40,7 +40,6 @@ export const StyledButton = styled.button`
 display: flex;
 /* justify-content: center; */
 align-self: center;
-
 padding: 16px 60px;
 border-radius: 200px;
 background-color: ${props => props.theme.colors.red};

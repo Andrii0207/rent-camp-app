@@ -50,7 +50,7 @@ export function ModaCardInfo({ data }) {
             </li>
           </ModalNavListWrapper>
         </ModalNavWrapper>
-        {isFeatures ? <Features /> : <Reviews />}
+        {isFeatures ? <Features data={data} /> : <Reviews data={data} />}
       </ModalWrapper>
     </>
   );

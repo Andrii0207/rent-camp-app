@@ -63,7 +63,7 @@ export const ModalNavListWrapper = styled.ul`
 display: flex;
 column-gap: 40px;
 align-items: center;
-margin-bottom: 24px;
+margin-bottom: 68px;
 color: ${props => props.theme.colors.primary};
 font-size: ${props => props.theme.fontSize.medium2};
 font-style: ${props => props.theme.fontStyle.normal};

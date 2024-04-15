@@ -1,10 +1,12 @@
 import { Form } from 'components/Form/Form';
+import { Consumer } from './Consumer';
+import { Container } from './Reviews.styled';
 
-export function Reviews() {
+export function Reviews({ data }) {
   return (
-    <div>
-      <p>reviews component</p>
+    <Container>
+      <Consumer data={data} />
       <Form />
-    </div>
+    </Container>
   );
 }

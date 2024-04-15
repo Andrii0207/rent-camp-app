@@ -16,6 +16,7 @@ export const theme = Object.freeze({
         small: '14px',
         medium: '16px',
         medium2: '20px',
+        medium3: "18px",
         large: '24px',
         xl: '30px',
         xxl: '34px',
