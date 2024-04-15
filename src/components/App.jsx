@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Home, Catalog, Favorites } from 'pages';
 import { SharedLayout } from 'components';
-import { Modal } from './Modal/Modal';
 import { Features } from './Features/Features';
 import { Reviews } from './Reviews/Reviews';
 

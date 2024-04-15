@@ -21,5 +21,5 @@ const advertsSlice = createSlice({
     }
 })
 
-
+export const { addCurrentCard } = advertsSlice.actions;
 export const advertsReducer = advertsSlice.reducer;

@@ -1,3 +1,9 @@
+import { ContainerWrapper } from './Features.styled';
+
 export function Features() {
-  return <div>Features page!!!</div>;
+  return (
+    <ContainerWrapper>
+      <p>features component</p>
+    </ContainerWrapper>
+  );
 }

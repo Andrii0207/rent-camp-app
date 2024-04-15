@@ -4,12 +4,20 @@ import {
   ModalGalleryItem,
   ModalGalleryWrapper,
   ModalImg,
+  ModalNavListWrapper,
+  ModalNavWrapper,
   ModalWrapper,
 } from './ModaCardInfo.styled';
 import CloseIcon from 'images/icons/close.svg';
-import { NavLink, Outlet } from 'react-router-dom';
+import { useState } from 'react';
+import { Reviews } from 'components/Reviews/Reviews';
+import { Features } from 'components/Features/Features';
 
 export function ModaCardInfo({ data }) {
+  const [isFeatures, setIsFeatures] = useState(true);
+
+  console.log(isFeatures);
+
   const { gallery, description } = data;
   return (
     <>
@@ -19,8 +27,8 @@ export function ModaCardInfo({ data }) {
           <img src={CloseIcon} alt="close icon" />
         </div>
         <ModalGalleryWrapper>
-          {gallery.map(item => (
-            <ul>
+          {gallery.map((item, index) => (
+            <ul key={index}>
               <ModalGalleryItem>
                 <ModalImg src={item} alt="camp_photo" />
               </ModalGalleryItem>
@@ -28,17 +36,21 @@ export function ModaCardInfo({ data }) {
           ))}
         </ModalGalleryWrapper>
         <ModalDescriptionText>{description}</ModalDescriptionText>
-        <nav>
-          <ul>
+        <ModalNavWrapper>
+          <ModalNavListWrapper>
             <li>
-              <NavLink to="features">Features</NavLink>
+              <button type="button" onClick={() => setIsFeatures(true)}>
+                Features
+              </button>
             </li>
             <li>
-              <NavLink to="reviews">Reviews</NavLink>
+              <button type="button" onClick={() => setIsFeatures(false)}>
+                Reviews
+              </button>
             </li>
-          </ul>
-        </nav>
-        <Outlet />
+          </ModalNavListWrapper>
+        </ModalNavWrapper>
+        {isFeatures ? <Features /> : <Reviews />}
       </ModalWrapper>
     </>
   );
