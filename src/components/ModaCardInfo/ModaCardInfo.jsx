@@ -7,6 +7,7 @@ import {
   ModalWrapper,
 } from './ModaCardInfo.styled';
 import CloseIcon from 'images/icons/close.svg';
+import { NavLink, Outlet } from 'react-router-dom';
 
 export function ModaCardInfo({ data }) {
   const { gallery, description } = data;
@@ -27,6 +28,17 @@ export function ModaCardInfo({ data }) {
           ))}
         </ModalGalleryWrapper>
         <ModalDescriptionText>{description}</ModalDescriptionText>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="features">Features</NavLink>
+            </li>
+            <li>
+              <NavLink to="reviews">Reviews</NavLink>
+            </li>
+          </ul>
+        </nav>
+        <Outlet />
       </ModalWrapper>
     </>
   );
