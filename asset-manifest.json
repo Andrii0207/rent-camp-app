@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rent-camp-app/static/css/main.5f5be0b1.css",
-    "main.js": "/rent-camp-app/static/js/main.899e023a.js",
+    "main.js": "/rent-camp-app/static/js/main.421da5ee.js",
     "index.html": "/rent-camp-app/index.html",
     "static/media/close.svg": "/rent-camp-app/static/media/close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.5f5be0b1.css.map": "/rent-camp-app/static/css/main.5f5be0b1.css.map",
-    "main.899e023a.js.map": "/rent-camp-app/static/js/main.899e023a.js.map"
+    "main.421da5ee.js.map": "/rent-camp-app/static/js/main.421da5ee.js.map"
   },
   "entrypoints": [
     "static/css/main.5f5be0b1.css",
-    "static/js/main.899e023a.js"
+    "static/js/main.421da5ee.js"
   ]
 }
