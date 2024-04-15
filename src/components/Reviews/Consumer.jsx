@@ -1,4 +1,5 @@
-import { Avatar, Letter, List, NameRatingWrapper, Text, TitleWrapper } from './Consumer.styled';
+import { Avatar, IconWrapper, Letter, List, NameRatingWrapper, Text, TitleWrapper } from './Consumer.styled';
+import Star from 'images/icons/star.svg';
 
 export function Consumer({ data: { reviews } }) {
   console.log(reviews);
@@ -12,7 +13,9 @@ export function Consumer({ data: { reviews } }) {
             </Avatar>
             <NameRatingWrapper>
               <h3>{reviewer_name}</h3>
-              <span>rating icon</span>
+              <IconWrapper>
+                <img src={Star} alt="" />
+              </IconWrapper>
             </NameRatingWrapper>
           </TitleWrapper>
           <Text>{comment}</Text>

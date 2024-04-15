@@ -47,4 +47,9 @@ font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.normal};
 line-height: 1.5; /* 150% */
 `
-
+export const IconWrapper = styled.div`
+& svg {
+    background-color: yellow;
+    fill: red;
+}
+`

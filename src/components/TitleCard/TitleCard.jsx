@@ -8,10 +8,9 @@ import {
   LocationWrapper,
   RatingLocationWrapper,
   TitleWrapper,
-  StyledStarIcon,
   StyledItem,
 } from './TitleCard.styled';
-import StarIcon from 'images/icons/star.png';
+
 import HeartIcon from 'images/icons/heart.png';
 import LocationIcon from 'images/icons/location.png';
 
@@ -28,7 +27,7 @@ export default function TitleCard({ entity }) {
         <RatingLocationWrapper>
           <RatingWrapper>
             <StyledItem>
-              <StyledStarIcon src={StarIcon} alt="rating icon" />
+              <p>rating-icon</p>
             </StyledItem>
             <li>
               <Reviews>
