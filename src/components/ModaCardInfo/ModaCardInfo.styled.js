@@ -1,13 +1,39 @@
 import styled from '@emotion/styled'
 
 export const ModalWrapper = styled.div`
+position: relative;
 width: 982px;
-min-height: 720px;
+height: 720px;
 padding: 40px;
 gap: 24px;
 flex-shrink: 0;
 border-radius: 20px;
 background: ${props => props.theme.colors.white};
+overflow: scroll;
+`
+export const Price = styled.p`
+font-size: ${props => props.theme.fontSize.large};
+font-style: ${props => props.theme.fontStyle.normal};
+font-weight: ${props => props.theme.fontWeight.heavy};
+line-height:1.25; /* 125% */
+color: ${props => props.theme.colors.primary};
+padding-right: 11px;
+`
+
+export const PriceWrapper = styled.div`
+display: flex;
+align-items: center;
+`
+
+export const StyledSVG = styled.svg`
+fill: red
+`
+
+export const StyledCloseIcon = styled.img`
+position: absolute;
+top: 40px;
+right: 40px;
+
 `
 
 export const ModalTitle = styled.div`

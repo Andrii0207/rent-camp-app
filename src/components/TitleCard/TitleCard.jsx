@@ -1,7 +1,5 @@
 import {
   CardTitle,
-  Price,
-  PriceWrapper,
   RatingWrapper,
   Reviews,
   StyledHeader,
@@ -10,12 +8,11 @@ import {
   TitleWrapper,
   StyledItem,
 } from './TitleCard.styled';
-
-import HeartIcon from 'images/icons/heart.png';
+import RatingIcon from '../../images/icons/star.svg';
 import LocationIcon from 'images/icons/location.png';
 
 export default function TitleCard({ entity }) {
-  const { price, rating, location, reviews, name } = entity;
+  const { rating, location, reviews, name } = entity;
   return (
     <TitleWrapper>
       <div>
@@ -27,7 +24,7 @@ export default function TitleCard({ entity }) {
         <RatingLocationWrapper>
           <RatingWrapper>
             <StyledItem>
-              <p>rating-icon</p>
+              <img src={RatingIcon} alt="" />
             </StyledItem>
             <li>
               <Reviews>
@@ -44,12 +41,6 @@ export default function TitleCard({ entity }) {
           </LocationWrapper>
         </RatingLocationWrapper>
       </div>
-      <PriceWrapper>
-        <Price>€ {price.toFixed(2).toString().replace('.', ',')}</Price>
-        <div>
-          <img src={HeartIcon} alt="favorite heart icon" />
-        </div>
-      </PriceWrapper>
     </TitleWrapper>
   );
 }

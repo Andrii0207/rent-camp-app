@@ -7,24 +7,32 @@ import {
   ModalNavListWrapper,
   ModalNavWrapper,
   ModalWrapper,
+  Price,
+  PriceWrapper,
+  StyledCloseIcon,
 } from './ModaCardInfo.styled';
-import CloseIcon from 'images/icons/close.svg';
 import { useState } from 'react';
 import { Reviews } from 'components/Reviews/Reviews';
 import { Features } from 'components/Features/Features';
+import CloseIcon from '../../images/icons/close.svg';
 
-export function ModaCardInfo({ data }) {
+export function ModaCardInfo({ data, closeModal }) {
   const [isFeatures, setIsFeatures] = useState(true);
 
-  console.log(isFeatures);
+  console.log('ModaCardInfo >>', closeModal);
 
-  const { gallery, description } = data;
+  const { gallery, description, price } = data;
   return (
     <>
       <ModalWrapper>
         <div>
           <TitleCard entity={data} />
-          <img src={CloseIcon} alt="close icon" />
+          <PriceWrapper>
+            <Price>€ {price.toFixed(2).toString().replace('.', ',')}</Price>
+          </PriceWrapper>
+          <button type="button" onClick={() => closeModal()}>
+            <StyledCloseIcon src={CloseIcon} alt="close icon" />
+          </button>
         </div>
         <ModalGalleryWrapper>
           {gallery.map((item, index) => (

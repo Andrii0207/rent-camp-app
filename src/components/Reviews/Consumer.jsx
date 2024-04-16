@@ -14,7 +14,7 @@ export function Consumer({ data: { reviews } }) {
             <NameRatingWrapper>
               <h3>{reviewer_name}</h3>
               <IconWrapper>
-                <img src={Star} alt="" />
+                <img src={Star} alt="rating icon" />
               </IconWrapper>
             </NameRatingWrapper>
           </TitleWrapper>

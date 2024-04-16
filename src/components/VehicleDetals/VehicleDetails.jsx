@@ -1,3 +1,4 @@
+import { updateVehicleData } from 'helpers/updateVehicleData';
 import { Item, List, Title } from './VehicleDetails.styled';
 
 export function VehicleDetails({ data: { form, tank, width, length, height, consumption } }) {
@@ -11,23 +12,23 @@ export function VehicleDetails({ data: { form, tank, width, length, height, cons
         </Item>
         <Item>
           <p>Leight</p>
-          <span>{length}</span>
+          <span>{updateVehicleData(length)}</span>
         </Item>
         <Item>
           <p>Width</p>
-          <span>{width}</span>
+          <span>{updateVehicleData(width)}</span>
         </Item>
         <Item>
           <p>Height</p>
-          <span>{height}</span>
+          <span>{updateVehicleData(height)}</span>
         </Item>
         <Item>
           <p>Tank</p>
-          <span>{tank}</span>
+          <span>{updateVehicleData(tank)}</span>
         </Item>
         <Item>
           <p>Consumption</p>
-          <span>{consumption}</span>
+          <span>{consumption.toString().replace('km', ' km')}</span>
         </Item>
       </List>
     </div>

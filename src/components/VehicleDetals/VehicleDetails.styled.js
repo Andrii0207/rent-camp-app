@@ -11,21 +11,16 @@ export const Title = styled.h3`
  font-style: ${props => props.theme.fontStyle.normal};
  font-weight: ${props => props.theme.fontWeight.heavy};
  line-height: 1.2; /* 120% */
- margin-bottom: 48px;
+margin-bottom: 24px;
+border-bottom: 1px solid ${props => props.theme.colors.lightGrey};
+padding-bottom: 24px;
+ `
 
- &::before {
-    content: "";
-    width: 150px;
-    height: 1px;
-    background-color: red;
- }
-`
 export const List = styled.ul`
 display: flex;
 flex-direction: column;
 gap: 14px;
 `
-
 
 export const Item = styled.li`
 display: flex;

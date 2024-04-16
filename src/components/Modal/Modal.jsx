@@ -28,7 +28,7 @@ export function Modal({ closeModal, modalData }) {
   return createPortal(
     <Overlay onClick={handleOverlayClick}>
       <div>
-        <ModaCardInfo data={modalData} />
+        <ModaCardInfo data={modalData} closeModal={closeModal} />
       </div>
     </Overlay>,
     modalRoot

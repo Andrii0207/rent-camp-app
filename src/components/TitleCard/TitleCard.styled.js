@@ -23,20 +23,6 @@ line-height: 1.25; /* 125% */
 color: ${props => props.theme.colors.primary};
 `
 
-export const Price = styled.p`
-font-size: ${props => props.theme.fontSize.large};
-font-style: ${props => props.theme.fontStyle.normal};
-font-weight: ${props => props.theme.fontWeight.heavy};
-line-height:1.25; /* 125% */
-color: ${props => props.theme.colors.primary};
-padding-right: 11px;
-`
-
-export const PriceWrapper = styled.div`
-display: flex;
-align-items: center;
-`
-
 export const Reviews = styled.p`
 color: ${props => props.theme.colors.primary};
 font-size: ${props => props.theme.fontSize.medium};
@@ -79,3 +65,4 @@ export const RatingLocationWrapper = styled.div`
 display: flex;
 align-items: center;
 `
+
