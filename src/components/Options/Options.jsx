@@ -1,7 +1,6 @@
 import { OptionItem, OptionList } from './Options.styled';
 
 export default function Options({ data }) {
-  console.log('Options >>>', data);
   const {
     adults,
     transmission,

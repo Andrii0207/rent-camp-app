@@ -1,10 +1,11 @@
-import { Wrapper } from './Catalog.styled';
+import { Container, Wrapper } from './Catalog.styled';
 import Card from 'components/Card/Card';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAdvertiseList } from '../../redux/operations';
 import { selectAdverts } from '../../redux/selectors';
 import { Modal } from 'components/Modal/Modal';
+import { Filters } from 'components/Filters/Filters';
 
 export function Catalog() {
   const dispatch = useDispatch();
@@ -32,12 +33,15 @@ export function Catalog() {
 
   return (
     <>
-      <Wrapper>
-        {adverts.map((item, index) => (
-          <Card key={index} data={item} openModal={handleOpenModal} />
-        ))}
-      </Wrapper>
-      {isShowModal && <Modal closeModal={handleCloseModal} modalData={modalData} />}
+      <Container>
+        <Filters />
+        <Wrapper>
+          {adverts.map((item, index) => (
+            <Card key={index} data={item} openModal={handleOpenModal} arr={adverts} />
+          ))}
+        </Wrapper>
+        {isShowModal && <Modal closeModal={handleCloseModal} modalData={modalData} />}
+      </Container>
     </>
   );
 }

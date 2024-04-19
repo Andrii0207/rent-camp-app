@@ -5,9 +5,24 @@ import { InfoCardWrapper, Price, PriceWrapper, TitleCommonWrapper, WrapperCard }
 import { Description } from 'components/Description/Description';
 import { CardPhoto } from 'components/CardPhoto/CardPhoto';
 import HeartIcon from '../../images/icons/heart.png';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-export default function Card({ data, openModal }) {
-  const { description, gallery, price } = data;
+export default function Card({ data, openModal, arr }) {
+  const { description, gallery, price, _id } = data;
+  const [favorite, setFavorite] = useState([]);
+
+  const dispatch = useDispatch();
+
+  const addFavoriteCard = id => {
+    console.log('addFavoriteCard >>', arr);
+    const filter = arr.map(item => item).filter(item => item._id === id);
+    setFavorite(filter);
+    if (favorite) {
+      console.log('favorite >>>', favorite);
+    }
+    // dispatch(addFavoriteCard(favorite));
+  };
 
   return (
     <>
@@ -17,9 +32,9 @@ export default function Card({ data, openModal }) {
             <TitleCard entity={data} />
             <PriceWrapper>
               <Price>€ {price.toFixed(2).toString().replace('.', ',')}</Price>
-              <div>
+              <button type="button" onClick={() => addFavoriteCard(_id)}>
                 <img src={HeartIcon} alt="favorite heart icon" />
-              </div>
+              </button>
             </PriceWrapper>
           </TitleCommonWrapper>
           <Description text={description} />

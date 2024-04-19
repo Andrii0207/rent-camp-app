@@ -1,25 +1,25 @@
 import { Outlet } from 'react-router-dom';
-import { StyledLink } from './SharedLayout.styled';
+import { Header, HeaderList, HeaderNav, MenuItem, StyledLink } from './SharedLayout.styled';
 
 export function SharedLayout() {
   return (
-    <>
-      <header>
-        <nav>
-          <ul>
-            <li>
+    <div>
+      <Header>
+        <HeaderNav>
+          <HeaderList>
+            <MenuItem>
               <StyledLink to="/">Home</StyledLink>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <StyledLink to="/catalog">Catalog</StyledLink>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <StyledLink to="/favorites">Favorites</StyledLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
+            </MenuItem>
+          </HeaderList>
+        </HeaderNav>
+      </Header>
       <Outlet />
-    </>
+    </div>
   );
 }

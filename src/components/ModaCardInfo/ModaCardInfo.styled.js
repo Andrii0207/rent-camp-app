@@ -72,7 +72,7 @@ margin-bottom: 44px;
 `
 
 export const ModalNavWrapper = styled.nav`
-& ::after{
+& ::after {
     content: "";
     flex-shrink: 0;
     width: 902px;
@@ -82,6 +82,7 @@ export const ModalNavWrapper = styled.nav`
     top: 24px;
     left: -237px;
 }
+
 `
 
 
@@ -95,4 +96,15 @@ font-size: ${props => props.theme.fontSize.medium2};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.heavy};
 line-height: 1.2; /* 120% */
+`
+
+export const ModalNavButton = styled.button`
+display: inline-block;
+
+ & ::after{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: red;
+}
 `

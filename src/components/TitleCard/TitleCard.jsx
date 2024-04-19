@@ -24,7 +24,7 @@ export default function TitleCard({ entity }) {
         <RatingLocationWrapper>
           <RatingWrapper>
             <StyledItem>
-              <img src={RatingIcon} alt="" />
+              <img src={RatingIcon} alt="rating icon" />
             </StyledItem>
             <li>
               <Reviews>

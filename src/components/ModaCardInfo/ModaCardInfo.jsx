@@ -4,6 +4,7 @@ import {
   ModalGalleryItem,
   ModalGalleryWrapper,
   ModalImg,
+  ModalNavButton,
   ModalNavListWrapper,
   ModalNavWrapper,
   ModalWrapper,
@@ -18,8 +19,6 @@ import CloseIcon from '../../images/icons/close.svg';
 
 export function ModaCardInfo({ data, closeModal }) {
   const [isFeatures, setIsFeatures] = useState(true);
-
-  console.log('ModaCardInfo >>', closeModal);
 
   const { gallery, description, price } = data;
   return (
@@ -47,9 +46,9 @@ export function ModaCardInfo({ data, closeModal }) {
         <ModalNavWrapper>
           <ModalNavListWrapper>
             <li>
-              <button type="button" onClick={() => setIsFeatures(true)}>
+              <ModalNavButton type="button" onClick={() => setIsFeatures(true)}>
                 Features
-              </button>
+              </ModalNavButton>
             </li>
             <li>
               <button type="button" onClick={() => setIsFeatures(false)}>
