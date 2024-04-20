@@ -28,7 +28,9 @@ export default function Card({ item, openModal }) {
     }
   };
 
-  console.log('favorites >>', favorites);
+  const isPaint = favorites.filter(item => Number(item._id) === Number(_id));
+
+  console.log('isPaint >>', isPaint);
 
   return (
     <>
