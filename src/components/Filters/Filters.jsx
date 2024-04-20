@@ -1,9 +1,13 @@
-import styled from 'styled-components';
 import Location from '../../images/icons/location.png';
-import { Container, Icon, ImputWrapper, InputLocation, Label, StyledButton } from './Filters.styled';
+import { Container, Icon, ImputWrapper, InputLocation, Label } from './Filters.styled';
 import { FilterOptions } from './FilterOptions';
+import Button from 'components/ShowMore/ShoreMore';
 
 export function Filters() {
+  const getFilterData = () => {
+    console.log('search-button click');
+  };
+
   return (
     <Container>
       <Label htmlFor="filters">Location</Label>
@@ -13,7 +17,9 @@ export function Filters() {
       </ImputWrapper>
       <FilterOptions />
 
-      <StyledButton type="button">Search</StyledButton>
+      <Button type="button" action={getFilterData}>
+        Search
+      </Button>
     </Container>
   );
 }

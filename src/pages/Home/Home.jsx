@@ -1,9 +1,8 @@
-import { Filters } from 'components/Filters/Filters';
-import { List } from './Home.styled';
+import { Container, List } from './Home.styled';
 
 export function Home() {
   return (
-    <div>
+    <Container>
       <h2>Rental Camps</h2>
       <p>
         When renting a Teardrop Freedom camper, you can be completely sure that you will spend your vacation
@@ -36,6 +35,6 @@ export function Home() {
         The main advantage is that you are your own boss, and it is the greatest degree of independence and freedom,
         comfort and living conditions create such an attractiveness .
       </p>
-    </div>
+    </Container>
   );
 }
