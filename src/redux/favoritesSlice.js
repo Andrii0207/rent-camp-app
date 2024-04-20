@@ -11,7 +11,7 @@ const favoritesSlice = createSlice({
             state.favoriteList.push(payload)
         },
         deleteFromFavorite(state, { payload }) {
-            state.favoriteList = state.favoriteList.filter(item => item !== payload)
+            state.favoriteList = state.favoriteList.filter(item => item._id !== payload._id)
         }
 
     },

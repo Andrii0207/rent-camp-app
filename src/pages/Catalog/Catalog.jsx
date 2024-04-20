@@ -37,7 +37,7 @@ export function Catalog() {
         <Filters />
         <Wrapper>
           {adverts.map((item, index) => (
-            <Card key={index} data={item} openModal={handleOpenModal} arr={adverts} />
+            <Card key={index} item={item} openModal={handleOpenModal} arr={adverts} />
           ))}
         </Wrapper>
         {isShowModal && <Modal closeModal={handleCloseModal} modalData={modalData} />}

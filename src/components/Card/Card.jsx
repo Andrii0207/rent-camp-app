@@ -4,17 +4,15 @@ import TitleCard from 'components/TitleCard/TitleCard';
 import { InfoCardWrapper, Price, PriceWrapper, TitleCommonWrapper, WrapperCard } from './Card.styled';
 import { Description } from 'components/Description/Description';
 import { CardPhoto } from 'components/CardPhoto/CardPhoto';
-import HeartIcon from '../../images/icons/heart.png';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { selectFavorites } from 'redux/selectors';
 
 import { selectFavorites } from '../../redux/selectors';
-import { ReactComponent as Qwe } from '../../images/icons/adults.svg';
+import { ReactComponent as Heart } from '../../images/icons/heart.svg';
 import { addToFavorite, deleteFromFavorite } from '../../redux/favoritesSlice';
 
-export default function Card({ data, openModal, arr }) {
-  const { description, gallery, price, _id } = data;
+export default function Card({ item, openModal }) {
+  const { description, gallery, price, _id } = item;
   const favorites = useSelector(selectFavorites);
   const [isFavorite, setIsFavorite] = useState(() => favorites.some(item => item === _id));
 
@@ -22,10 +20,10 @@ export default function Card({ data, openModal, arr }) {
 
   const addFavoriteCard = () => {
     if (!isFavorite) {
-      dispatch(addToFavorite(_id));
+      dispatch(addToFavorite(item));
       setIsFavorite(true);
     } else {
-      dispatch(deleteFromFavorite(_id));
+      dispatch(deleteFromFavorite(item));
       setIsFavorite(false);
     }
   };
@@ -37,20 +35,19 @@ export default function Card({ data, openModal, arr }) {
       <WrapperCard>
         <InfoCardWrapper>
           <TitleCommonWrapper>
-            <TitleCard entity={data} />
+            <TitleCard entity={item} />
             <PriceWrapper>
               <Price>€ {price.toFixed(2).toString().replace('.', ',')}</Price>
               <button type="button" onClick={addFavoriteCard}>
-                <img src={HeartIcon} alt="favorite heart icon" />
+                <span style={{ stroke: 'black', fill: isFavorite ? 'red' : 'transparent' }}>
+                  <Heart />
+                </span>
               </button>
-              <span style={{ color: 'red' }}>
-                <Qwe />
-              </span>
             </PriceWrapper>
           </TitleCommonWrapper>
           <Description text={description} />
-          <Options data={data} />
-          <Button data={data} action={openModal}>
+          <Options data={item} />
+          <Button data={item} action={openModal}>
             Show More
           </Button>
         </InfoCardWrapper>
