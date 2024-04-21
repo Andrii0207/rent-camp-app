@@ -39,7 +39,4 @@ align-items: start;
 justify-content: space-between;
 `
 
-export const SVG = styled.svg`
-stroke: red;
-`
 

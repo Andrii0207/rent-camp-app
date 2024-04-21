@@ -2,8 +2,6 @@ import styled from '@emotion/styled'
 
 
 export const FormWrapper = styled.div`
-/* display: flex; */
-/* flex-direction: column; */
 min-width: 448px;
 height: 532px;
 padding: 24px;
@@ -38,7 +36,6 @@ border: 1px solid ${props => props.theme.colors.lightGrey};
 
 export const StyledButton = styled.button`
 display: flex;
-/* justify-content: center; */
 align-self: center;
 padding: 16px 60px;
 border-radius: 200px;
