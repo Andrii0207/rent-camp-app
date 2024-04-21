@@ -1,6 +1,6 @@
 import { Container, ImputWrapper, InputLocation, Label, SpanIcon } from './Filters.styled';
 import { FilterOptions } from './FilterOptions';
-import Button from 'components/ShowMore/ShoreMore';
+import Button from 'components/ShowMore/Button';
 import { ReactComponent as LocationIcon } from '../../images/icons/location.svg';
 
 export function Filters() {

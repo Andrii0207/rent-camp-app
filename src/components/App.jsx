@@ -3,19 +3,23 @@ import { Home, Catalog, Favorites } from 'pages';
 import { SharedLayout } from 'components';
 import { Features } from './Features/Features';
 import { Reviews } from './Reviews/Reviews';
+import { ToastContainer } from 'react-toastify';
 
 export const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<SharedLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/catalog" element={<Catalog />}>
-          <Route path="features" element={<Features />} />
-          <Route path="reviews" element={<Reviews />} />
+    <>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/catalog" element={<Catalog />}>
+            <Route path="features" element={<Features />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="*" element={<div>NOT Found</div>} />
         </Route>
-        <Route path="/favorites" element={<Favorites />} />
-        <Route path="*" element={<div>NOT Found</div>} />
-      </Route>
-    </Routes>
+      </Routes>
+      <ToastContainer />
+    </>
   );
 };

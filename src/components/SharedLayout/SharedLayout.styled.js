@@ -13,14 +13,12 @@ flex-direction: column;
 justify-content: center;
 position: fixed;
 z-index: 999;
-margin: 25px 0;
 background-color: ${props => props.theme.colors.white};
 `
 
 export const HeaderNav = styled.nav`
-/* position: absolute; */
 width: 100vw;
-padding-bottom: 25px;
+padding: 25px 0;
 border-bottom: 1px solid ${props => props.theme.colors.lightGrey};
 
 `

@@ -17,6 +17,7 @@ margin-bottom: 8px;
 
 `
 export const CardTitle = styled.h2`
+max-width: 340px;
 color: ${props => props.theme.colors.primary};
 font-size: ${props => props.theme.fontSize.large};
 font-style: ${props => props.theme.fontStyle.normal};

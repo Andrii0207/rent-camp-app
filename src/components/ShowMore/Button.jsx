@@ -1,4 +1,4 @@
-import { StyledButton } from './ShowMore.styled';
+import { StyledButton } from './Button.styled';
 
 export default function Button({ action, data, children }) {
   return (

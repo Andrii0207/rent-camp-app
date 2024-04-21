@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAdvertiseList } from "./operations";
+import { getAdvertiseList, getAll } from "./operations";
 
 const advertsSlice = createSlice({
     name: "adverts",
-    initialState: { entity: [], isLoading: false, error: null, },
+    initialState: { entity: [], isLoading: false, error: null, all: [] },
     // reducers: {
     //     addToFavorite(state, { payload }) {
     //         state.favorites.push(payload)
@@ -20,10 +20,22 @@ const advertsSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getAdvertiseList.fulfilled, (state, { payload }) => {
+                console.log(payload)
                 state.isLoading = false;
-                state.entity = payload;
+                state.entity = [...state.entity, ...payload];
                 state.error = null;
             }).addCase(getAdvertiseList.rejected, (state, { payload }) => {
+                state.isLoading = false;
+                state.error = payload;
+            }).addCase(getAll.pending, (state, _) => {
+                state.isLoading = true;
+            })
+            .addCase(getAll.fulfilled, (state, { payload }) => {
+                console.log(payload)
+                state.isLoading = false;
+                state.all = payload;
+                state.error = null;
+            }).addCase(getAll.rejected, (state, { payload }) => {
                 state.isLoading = false;
                 state.error = payload;
             })

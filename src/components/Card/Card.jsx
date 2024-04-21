@@ -1,5 +1,5 @@
 import Options from 'components/Options/Options';
-import Button from 'components/ShowMore/ShoreMore';
+import Button from 'components/ShowMore/Button';
 import TitleCard from 'components/TitleCard/TitleCard';
 import { InfoCardWrapper, Price, PriceWrapper, TitleCommonWrapper, WrapperCard } from './Card.styled';
 import { Description } from 'components/Description/Description';
