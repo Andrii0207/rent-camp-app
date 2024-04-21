@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
 width: 360px;
 position: relative;
-padding-top: 100px
 `
 
 export const ImputWrapper = styled.div`

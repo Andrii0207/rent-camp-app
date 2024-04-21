@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import { Header, HeaderList, HeaderNav, MenuItem, StyledLink } from './SharedLayout.styled';
+import { Container, Header, HeaderList, HeaderNav, MenuItem, StyledLink } from './SharedLayout.styled';
 
 export function SharedLayout() {
   return (
-    <div>
+    <Container>
       <Header>
         <HeaderNav>
           <HeaderList>
@@ -20,6 +20,6 @@ export function SharedLayout() {
         </HeaderNav>
       </Header>
       <Outlet />
-    </div>
+    </Container>
   );
 }

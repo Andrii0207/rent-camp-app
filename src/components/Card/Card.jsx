@@ -14,7 +14,7 @@ import { addToFavorite, deleteFromFavorite } from '../../redux/favoritesSlice';
 export default function Card({ item, openModal }) {
   const { description, gallery, price, _id } = item;
   const favorites = useSelector(selectFavorites);
-  const [isFavorite, setIsFavorite] = useState(() => favorites.some(item => item === _id));
+  const [isFavorite, setIsFavorite] = useState(() => favorites.some(item => item._id === _id));
 
   const dispatch = useDispatch();
 
@@ -27,10 +27,6 @@ export default function Card({ item, openModal }) {
       setIsFavorite(false);
     }
   };
-
-  const isPaint = favorites.filter(item => Number(item._id) === Number(_id));
-
-  console.log('isPaint >>', isPaint);
 
   return (
     <>

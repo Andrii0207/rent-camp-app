@@ -1,38 +1,45 @@
 import styled from '@emotion/styled'
 import { NavLink } from "react-router-dom";
 
-export const HeaderWrapper = styled.div`
-position: relative;
-width: 100vh;
+export const Container = styled.div`
+
 `
 
 export const Header = styled.header`
-height: 70px;
+position: relative;
 width: 100vw;
 display: flex;
 flex-direction: column;
 justify-content: center;
 position: fixed;
 z-index: 999;
+margin: 25px 0;
 background-color: ${props => props.theme.colors.white};
 `
 
 export const HeaderNav = styled.nav`
-& ::after {
-    content: "";
-    width: 100vw;
-    height: 2px;
-    background-color: ${props => props.theme.colors.accent};
-    position: absolute;
-    top: 70px;
-    right: 20;
-}
+/* position: absolute; */
+width: 100vw;
+padding-bottom: 25px;
+border-bottom: 2px solid ${props => props.theme.colors.lightGrey};
+
 `
 
 export const StyledLink = styled(NavLink)`
 &.active {
     color: ${props => props.theme.colors.accent};
+    border-bottom: 20px;
+    padding-bottom: 25px;
+    border-bottom: 5px solid ${props => props.theme.colors.accent};
 }
+
+& ::after {
+    content: "";
+    width: 20px;
+    height: 5px;
+    background-color: red;
+}
+ 
 
 &:hover {
     color: ${props => props.theme.colors.accent}
@@ -52,4 +59,5 @@ font-size: ${props => props.theme.fontSize.large};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.heavy};
 line-height:1.25; /* 125% */
+
 `

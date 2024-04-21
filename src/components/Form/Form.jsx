@@ -1,5 +1,5 @@
 import Button from 'components/ShowMore/ShoreMore';
-import { FormData, FormWrapper, StyledButton, Text, Title } from './Form.styled';
+import { FormData, FormWrapper, Text, Title } from './Form.styled';
 
 export function Form() {
   const getFormData = () => {

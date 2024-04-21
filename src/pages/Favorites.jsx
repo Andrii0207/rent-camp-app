@@ -1,22 +1,16 @@
 import { useSelector } from 'react-redux';
 import { selectFavorites } from '../redux/selectors';
-import Card from 'components/Card/Card';
-import { FavoriteLIst } from './Favorites.styles';
+import { CardList } from 'components/CardList/CardList';
+import { List, Text } from './Favorites.styles';
 
 export function Favorites() {
-  const favorites = useSelector(selectFavorites);
-  console.log('favorites >>', favorites);
+  const favoritList = useSelector(selectFavorites);
+
+  console.log('favoritList >>', favoritList.length);
+
   return (
-    <FavoriteLIst>
-      {favorites.length !== 0 ? (
-        favorites.map(item => (
-          <li key={item._id}>
-            <Card item={item} />
-          </li>
-        ))
-      ) : (
-        <p>Sorry, your favorite is empty</p>
-      )}
-    </FavoriteLIst>
+    <List>
+      {favoritList.length !== 0 ? <CardList list={favoritList} /> : <Text>Opps, your favorite is empty 🙊 </Text>}
+    </List>
   );
 }
