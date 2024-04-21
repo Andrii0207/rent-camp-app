@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 export const TitleWrapper = styled.div`
-margin-bottom: 24px;
+margin-bottom: 16px;
 display: flex;
 align-items: baseline;
 justify-content: space-between;
+gap: 24px;
 `
 
 
@@ -16,11 +17,11 @@ margin-bottom: 8px;
 
 `
 export const CardTitle = styled.h2`
+color: ${props => props.theme.colors.primary};
 font-size: ${props => props.theme.fontSize.large};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.heavy};;
 line-height: 1.25; /* 125% */
-color: ${props => props.theme.colors.primary};
 `
 
 export const Reviews = styled.p`
@@ -39,26 +40,27 @@ padding-right: 16px;
 `
 
 export const StyledItem = styled.li`
+
 margin-right: 4px;
+width: 16px;
+height: 16px;
 `
-
-export const StyledStarIcon = styled.img`
-background-color: ${props => props.theme.colors.yellow};
-`
-
-export const Location = styled.div`
-color: ${props => props.theme.colors.primary};;
-
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
+export const RatingIconSpan = styled.span`
+stroke: ${props => props.theme.colors.yellow};
+fill: ${props => props.theme.colors.yellow};
+padding: 0;
 `
 
 export const LocationWrapper = styled.ul`
 display: flex;
 align-items: center;
+`
+
+export const LocationIconSpan = styled.span`
+stroke: ${props => props.theme.colors.primary};
+color: ${props => props.theme.colors.primary};;
+width: 16px;
+height: 16px;
 `
 
 export const RatingLocationWrapper = styled.div`

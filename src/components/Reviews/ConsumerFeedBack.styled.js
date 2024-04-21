@@ -1,10 +1,5 @@
 import styled from '@emotion/styled'
 
-export const List = styled.ul`
-display: flex;
-flex-direction: column;
-row-gap: 24px;
-`
 
 export const TitleWrapper = styled.div`
 display: flex;
@@ -46,9 +41,5 @@ font-weight: ${props => props.theme.fontWeight.normal};
 line-height: 1.5; /* 150% */
 `
 export const IconWrapper = styled.div`
-& svg {
-    /* background-color: yellow; */
-    fill: red;
-    stroke: teal;
-}
+fill: ${props => props.theme.colors.whiteCold};
 `

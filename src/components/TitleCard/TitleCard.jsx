@@ -7,9 +7,12 @@ import {
   RatingLocationWrapper,
   TitleWrapper,
   StyledItem,
+  RatingIconSpan,
+  LocationIconSpan,
 } from './TitleCard.styled';
-import RatingIcon from '../../images/icons/star.svg';
-import LocationIcon from 'images/icons/location.png';
+
+import { ReactComponent as LocationIcon } from 'images/icons/location.svg';
+import { ReactComponent as RatingIcon } from 'images/icons/rating.svg';
 
 export default function TitleCard({ entity }) {
   const { rating, location, reviews, name } = entity;
@@ -24,7 +27,9 @@ export default function TitleCard({ entity }) {
         <RatingLocationWrapper>
           <RatingWrapper>
             <StyledItem>
-              <img src={RatingIcon} alt="rating icon" />
+              <RatingIconSpan>
+                <RatingIcon width="16" height="16" />
+              </RatingIconSpan>
             </StyledItem>
             <li>
               <Reviews>
@@ -35,7 +40,9 @@ export default function TitleCard({ entity }) {
 
           <LocationWrapper>
             <StyledItem>
-              <img src={LocationIcon} alt="location icon" />
+              <LocationIconSpan>
+                <LocationIcon width="16" height="16" />
+              </LocationIconSpan>
             </StyledItem>
             <li>{location}</li>
           </LocationWrapper>

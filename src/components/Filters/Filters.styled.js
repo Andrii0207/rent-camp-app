@@ -27,18 +27,19 @@ outline-color: ${props => props.theme.colors.lightGrey};
 border: none;
 cursor: pointer;
 
-color: ${props => props.theme.colors.primaty};
+color: ${props => props.theme.colors.primary};
 font-size: ${props => props.theme.fontSize.medium};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.normal};
 line-height: 1.25; /* 125% */
 `
 
-export const Icon = styled.img`
+export const SpanIcon = styled.span`
 position: absolute;
 top: 50%;
 left: 18px;
 transform: translateY(-50%);
+stroke: ${props => props.theme.colors.primary};
 `
 export const StyledButton = styled.button`
 /* display: flex; */

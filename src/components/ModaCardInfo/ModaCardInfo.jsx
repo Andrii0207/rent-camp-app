@@ -7,32 +7,35 @@ import {
   ModalNavButton,
   ModalNavListWrapper,
   ModalNavWrapper,
+  ModalTitleWrapper,
   ModalWrapper,
+  NavItem,
   Price,
   PriceWrapper,
-  StyledCloseIcon,
+  StyledCloseButton,
 } from './ModaCardInfo.styled';
 import { useState } from 'react';
 import { Reviews } from 'components/Reviews/Reviews';
 import { Features } from 'components/Features/Features';
-import CloseIcon from '../../images/icons/close.svg';
+import { ReactComponent as CloseIcon } from '../../images/icons/close.svg';
 
 export function ModaCardInfo({ data, closeModal }) {
   const [isFeatures, setIsFeatures] = useState(true);
 
-  const { gallery, description, price } = data;
+  const { gallery, description, price, reviews } = data;
+  console.log('ModaCardInfo reviews>>', data);
   return (
     <>
       <ModalWrapper>
-        <div>
+        <ModalTitleWrapper>
           <TitleCard entity={data} />
           <PriceWrapper>
             <Price>€ {price.toFixed(2).toString().replace('.', ',')}</Price>
           </PriceWrapper>
-          <button type="button" onClick={() => closeModal()}>
-            <StyledCloseIcon src={CloseIcon} alt="close icon" />
-          </button>
-        </div>
+          <StyledCloseButton type="button" onClick={() => closeModal()}>
+            <CloseIcon />
+          </StyledCloseButton>
+        </ModalTitleWrapper>
         <ModalGalleryWrapper>
           {gallery.map((item, index) => (
             <ul key={index}>
@@ -45,19 +48,23 @@ export function ModaCardInfo({ data, closeModal }) {
         <ModalDescriptionText>{description}</ModalDescriptionText>
         <ModalNavWrapper>
           <ModalNavListWrapper>
-            <li>
+            <NavItem>
               <ModalNavButton type="button" onClick={() => setIsFeatures(true)}>
                 Features
               </ModalNavButton>
-            </li>
-            <li>
-              <button type="button" onClick={() => setIsFeatures(false)}>
+            </NavItem>
+            <NavItem>
+              <ModalNavButton type="button" onClick={() => setIsFeatures(false)}>
                 Reviews
-              </button>
-            </li>
+              </ModalNavButton>
+            </NavItem>
           </ModalNavListWrapper>
         </ModalNavWrapper>
-        {isFeatures ? <Features data={data} /> : <Reviews data={data} />}
+        {isFeatures ? (
+          <Features data={data} isFeatures={isFeatures} />
+        ) : (
+          <Reviews data={data} isFeatures={isFeatures} />
+        )}
       </ModalWrapper>
     </>
   );

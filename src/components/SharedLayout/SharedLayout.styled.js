@@ -21,7 +21,7 @@ export const HeaderNav = styled.nav`
 /* position: absolute; */
 width: 100vw;
 padding-bottom: 25px;
-border-bottom: 2px solid ${props => props.theme.colors.lightGrey};
+border-bottom: 1px solid ${props => props.theme.colors.lightGrey};
 
 `
 
@@ -30,7 +30,7 @@ export const StyledLink = styled(NavLink)`
     color: ${props => props.theme.colors.accent};
     border-bottom: 20px;
     padding-bottom: 25px;
-    border-bottom: 5px solid ${props => props.theme.colors.accent};
+    border-bottom: 4px solid ${props => props.theme.colors.accent};
 }
 
 & ::after {

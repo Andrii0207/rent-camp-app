@@ -37,7 +37,7 @@ export default function Card({ item, openModal }) {
             <PriceWrapper>
               <Price>€ {price.toFixed(2).toString().replace('.', ',')}</Price>
               <button type="button" onClick={addFavoriteCard}>
-                <span style={{ stroke: 'black', fill: isFavorite ? 'red' : 'transparent' }}>
+                <span style={{ stroke: 'black', fill: isFavorite ? '#D84343' : 'transparent' }}>
                   <Heart />
                 </span>
               </button>

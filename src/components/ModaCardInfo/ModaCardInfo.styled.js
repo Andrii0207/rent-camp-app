@@ -11,12 +11,16 @@ border-radius: 20px;
 background: ${props => props.theme.colors.white};
 overflow: scroll;
 `
+export const ModalTitleWrapper = styled.div`
+margin-bottom: 24px;
+`
+
 export const Price = styled.p`
+color: ${props => props.theme.colors.primary};
 font-size: ${props => props.theme.fontSize.large};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.heavy};
 line-height:1.25; /* 125% */
-color: ${props => props.theme.colors.primary};
 padding-right: 11px;
 `
 
@@ -25,15 +29,10 @@ display: flex;
 align-items: center;
 `
 
-export const StyledSVG = styled.svg`
-fill: red
-`
-
 export const StyledCloseIcon = styled.img`
 position: absolute;
 top: 40px;
 right: 40px;
-
 `
 
 export const ModalTitle = styled.div`
@@ -51,7 +50,16 @@ margin-bottom: 24px;
 
 export const ModalGalleryItem = styled.li`
 width: 290px;
+`
+export const StyledCloseButton = styled.button`
+stroke: ${props => props.theme.colors.primary};
+position: absolute;
+top: 40px;
+right: 40px;
 
+& :hover {
+    stroke: ${props => props.theme.colors.accent};
+}
 `
 
 export const ModalImg = styled.img`
@@ -82,9 +90,7 @@ export const ModalNavWrapper = styled.nav`
     top: 24px;
     left: -237px;
 }
-
 `
-
 
 export const ModalNavListWrapper = styled.ul`
 display: flex;
@@ -98,13 +104,24 @@ font-weight: ${props => props.theme.fontWeight.heavy};
 line-height: 1.2; /* 120% */
 `
 
+export const NavItem = styled.li`
+& ::after {
+    content: "";
+    flex-shrink: 0;
+    width: 30;
+    height: 4px;
+    background-color: ${props => props.theme.colors.accent};
+}
+`
+
 export const ModalNavButton = styled.button`
 display: inline-block;
 
- & ::after{
+& ::after {
     content: "";
-    width: 30px;
-    height: 2px;
-    background-color: red;
+    flex-shrink: 0;
+    width: 30;
+    height: 4px;
+    background-color: ${props => props.theme.colors.accent};
 }
 `
