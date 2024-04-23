@@ -35,7 +35,7 @@ export default function Card({ item, openModal }) {
           <TitleCommonWrapper>
             <TitleCard entity={item} />
             <PriceWrapper>
-              <Price>€ {price.toFixed(2).toString().replace('.', ',')}</Price>
+              <Price>€ {price.toFixed(2)}</Price>
               <button type="button" onClick={addFavoriteCard}>
                 <span
                   style={{ stroke: isFavorite ? '#D84343' : 'black', fill: isFavorite ? '#D84343' : 'transparent' }}

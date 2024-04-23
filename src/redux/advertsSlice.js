@@ -22,7 +22,7 @@ const advertsSlice = createSlice({
             })
             .addCase(getAdvertiseList.fulfilled, (state, { payload }) => {
                 state.isLoading = false;
-                state.entity = checkResponse(state.entity, payload, "id") ? state.entity : [...state.entity, ...payload];
+                state.entity = checkResponse(state.entity, payload, "_id") ? state.entity : [...state.entity, ...payload];
                 state.error = null;
             }).addCase(getAdvertiseList.rejected, (state, { payload }) => {
                 state.isLoading = false;
