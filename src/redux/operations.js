@@ -20,7 +20,6 @@ export const getAll = createAsyncThunk(
     "adverts/fetchAll", async (_, thunkAPI) => {
         try {
             const { data } = await axios.get('/adverts');
-            console.log("getAll", data)
             return data;
         } catch (err) {
             return thunkAPI.rejectWithValue(err.message)

@@ -39,4 +39,8 @@ align-items: start;
 justify-content: space-between;
 `
 
-
+export const SpanIcon = styled.span`
+& :hover {
+    stroke: ${props => props.theme.colors.accent};
+}
+`

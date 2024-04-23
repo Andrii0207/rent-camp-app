@@ -1,7 +1,7 @@
 import Options from 'components/Options/Options';
 import Button from 'components/ShowMore/Button';
 import TitleCard from 'components/TitleCard/TitleCard';
-import { InfoCardWrapper, Price, PriceWrapper, TitleCommonWrapper, WrapperCard } from './Card.styled';
+import { InfoCardWrapper, Price, PriceWrapper, SpanIcon, TitleCommonWrapper, WrapperCard } from './Card.styled';
 import { Description } from 'components/Description/Description';
 import { CardPhoto } from 'components/CardPhoto/CardPhoto';
 import { useState } from 'react';
@@ -37,11 +37,11 @@ export default function Card({ item, openModal }) {
             <PriceWrapper>
               <Price>€ {price.toFixed(2)}</Price>
               <button type="button" onClick={addFavoriteCard}>
-                <span
+                <SpanIcon
                   style={{ stroke: isFavorite ? '#D84343' : 'black', fill: isFavorite ? '#D84343' : 'transparent' }}
                 >
                   <Heart />
-                </span>
+                </SpanIcon>
               </button>
             </PriceWrapper>
           </TitleCommonWrapper>

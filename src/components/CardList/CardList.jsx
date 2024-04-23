@@ -14,9 +14,6 @@ export function CardList({ list }) {
   const [isShowModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState('');
   const [page, setPage] = useState(1);
-  const [isLoadMore, setIsLoadMore] = useState(true);
-  // const [isLoading, setIsLoading] = useState(false);
-  const [data, setfirst] = useState([]);
 
   const dispatch = useDispatch();
   const totalHits = useSelector(selectAll);
@@ -36,33 +33,28 @@ export function CardList({ list }) {
     setPage(() => page + 1);
   };
 
-  console.log('totalHits >', totalHits.length);
-
   const isShownButtonLoadMore = page < Math.ceil(totalHits.length / 4);
-  console.log('isShownButtonLoadMore >>>', isShownButtonLoadMore);
+  const lastPage = Math.ceil(totalHits.length / page);
 
   useEffect(() => {
-    // setIsLoadMore(page < Math.ceil(totalHits / 4) ? true : false);
-    !isLoadMore &&
+    page === lastPage &&
       toast.info('You got all advertise', {
         autoClose: 2000,
         theme: 'light',
       });
     dispatch(getAdvertiseList(page));
-  }, [dispatch, isLoadMore, page]);
+  }, [dispatch, lastPage, page]);
 
   useEffect(() => {
     dispatch(getAll());
   }, [dispatch]);
 
-  console.log(isLoading);
-
   return (
     <>
       {isLoading && <Spinner />}
       <Wrapper>
-        {list.map((item, index) => (
-          <Card key={index} item={item} openModal={handleOpenModal} />
+        {list.map(item => (
+          <Card key={item._id} item={item} openModal={handleOpenModal} />
         ))}
         {isShowModal && <Modal closeModal={handleCloseModal} modalData={modalData} />}
       </Wrapper>

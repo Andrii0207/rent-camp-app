@@ -51,7 +51,11 @@ export function ModaCardInfo({ data, closeModal }) {
             <NavItem>
               <ModalNavButton
                 type="button"
-                style={isFeatures ? { borderBottom: '5px solid red' } : { borderBottom: 'none' }}
+                style={
+                  isFeatures
+                    ? { borderBottom: '5px solid #D84343', paddingBottom: '19px' }
+                    : { borderBottom: '5px solid transparent', paddingBottom: '19px' }
+                }
                 onClick={() => setIsFeatures(true)}
               >
                 Features
@@ -60,7 +64,11 @@ export function ModaCardInfo({ data, closeModal }) {
             <NavItem>
               <ModalNavButton
                 type="button"
-                style={!isFeatures ? { borderBottom: '5px solid red' } : { borderBottom: 'none' }}
+                style={
+                  !isFeatures
+                    ? { borderBottom: '5px solid #D84343', paddingBottom: '19px' }
+                    : { borderBottom: '5px solid transparent', paddingBottom: '19px' }
+                }
                 onClick={() => setIsFeatures(false)}
               >
                 Reviews

@@ -5,16 +5,7 @@ import { checkResponse } from "./checkResponce";
 const advertsSlice = createSlice({
     name: "adverts",
     initialState: { entity: [], isLoading: false, error: null, all: [] },
-    // reducers: {
-    //     addToFavorite(state, { payload }) {
-    //         state.favorites.push(payload)
 
-    //     },
-    //     deleteFromFavorite(state, { payload }) {
-    //         state.favorites = state.favorites.filter(item => item !== payload)
-    //     }
-
-    // },
     extraReducers: builder => {
         builder
             .addCase(getAdvertiseList.pending, (state, _) => {
@@ -41,5 +32,4 @@ const advertsSlice = createSlice({
     }
 })
 
-// export const { addToFavorite, deleteFromFavorite } = advertsSlice.actions;
 export const advertsReducer = advertsSlice.reducer;

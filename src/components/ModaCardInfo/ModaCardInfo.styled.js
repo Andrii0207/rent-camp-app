@@ -81,40 +81,43 @@ margin-bottom: 44px;
 
 export const ModalNavWrapper = styled.nav`
 position: relative;
+width: 100%;
 `
 
 export const ModalNavListWrapper = styled.ul`
 display: flex;
 column-gap: 40px;
 align-items: center;
-margin-bottom: 68px;
+margin-bottom: 44px;
 color: ${props => props.theme.colors.primary};
 font-size: ${props => props.theme.fontSize.medium2};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.heavy};
 line-height: 1.2; /* 120% */
 & ::after {
-    content: "";
+    content: '';
     position: absolute;
     flex-shrink: 0;
-    width: 902px;
+    width: 100%;
     height: 1px;
     background-color: ${props => props.theme.colors.lightGrey};
-    bottom: -24px;
+    bottom: 0;
     left: 0;
 }
 `
 
 export const NavItem = styled.li`
-/* & ::after {
-    content: "";
-    flex-shrink: 0;
-    width: 30;
-    height: 4px;
-    background-color: ${props => props.theme.colors.accent};
-} */
 `
 
 export const ModalNavButton = styled.button`
-/* padding-bottom: 24px; */
+& ::after {
+    content: '';
+    position: absolute;
+    flex-shrink: 0;
+    width: 100%;
+    height: 4px;
+    background-color: ${props => props.theme.colors.lightGrey};
+    bottom: -20px;
+    left: 0;
+}
 `
