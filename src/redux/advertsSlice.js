@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getAdvertiseList, getAll } from "./operations";
+import { checkResponse } from "./checkResponce";
 
 const advertsSlice = createSlice({
     name: "adverts",
@@ -20,9 +21,8 @@ const advertsSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getAdvertiseList.fulfilled, (state, { payload }) => {
-                console.log(payload)
                 state.isLoading = false;
-                state.entity = [...state.entity, ...payload];
+                state.entity = checkResponse(state.entity, payload, "_id") ? state.entity : [...state.entity, ...payload];
                 state.error = null;
             }).addCase(getAdvertiseList.rejected, (state, { payload }) => {
                 state.isLoading = false;
@@ -31,7 +31,6 @@ const advertsSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getAll.fulfilled, (state, { payload }) => {
-                console.log(payload)
                 state.isLoading = false;
                 state.all = payload;
                 state.error = null;

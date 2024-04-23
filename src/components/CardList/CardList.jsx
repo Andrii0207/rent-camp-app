@@ -7,7 +7,7 @@ import Card from 'components/Card/Card';
 import { Modal } from 'components/Modal/Modal';
 import { Wrapper } from './CardList.styled';
 import Button from 'components/ShowMore/Button';
-import { selectAll } from '../../redux/selectors';
+import { selectAll, selectIsLoading } from '../../redux/selectors';
 import Spinner from 'components/Loader/Loader';
 
 export function CardList({ list }) {
@@ -15,10 +15,12 @@ export function CardList({ list }) {
   const [modalData, setModalData] = useState('');
   const [page, setPage] = useState(1);
   const [isLoadMore, setIsLoadMore] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(false);
+  const [data, setfirst] = useState([]);
 
   const dispatch = useDispatch();
-  const totalHits = useSelector(selectAll).length;
+  const totalHits = useSelector(selectAll);
+  const isLoading = useSelector(selectIsLoading);
 
   const handleOpenModal = data => {
     setShowModal(true);
@@ -34,17 +36,20 @@ export function CardList({ list }) {
     setPage(() => page + 1);
   };
 
+  console.log('totalHits >', totalHits.length);
+
+  const isShownButtonLoadMore = page < Math.ceil(totalHits.length / 4);
+  console.log('isShownButtonLoadMore >>>', isShownButtonLoadMore);
+
   useEffect(() => {
-    setIsLoading(true);
-    setIsLoadMore(page < Math.ceil(totalHits / 4) ? true : false);
+    // setIsLoadMore(page < Math.ceil(totalHits / 4) ? true : false);
     !isLoadMore &&
       toast.info('You got all advertise', {
         autoClose: 2000,
         theme: 'light',
       });
     dispatch(getAdvertiseList(page));
-    setIsLoading(false);
-  }, [dispatch, totalHits, page, isLoadMore, isLoading]);
+  }, [dispatch, isLoadMore, page]);
 
   useEffect(() => {
     dispatch(getAll());
@@ -61,7 +66,7 @@ export function CardList({ list }) {
         ))}
         {isShowModal && <Modal closeModal={handleCloseModal} modalData={modalData} />}
       </Wrapper>
-      {isLoadMore && (
+      {isShownButtonLoadMore && (
         <Button action={handleLoadMore} page={page}>
           Load more
         </Button>
