@@ -80,16 +80,7 @@ margin-bottom: 44px;
 `
 
 export const ModalNavWrapper = styled.nav`
-& ::after {
-    content: "";
-    flex-shrink: 0;
-    width: 902px;
-    height: 1px;
-    background-color: ${props => props.theme.colors.lightGrey};
-    position: relative;
-    top: 24px;
-    left: -237px;
-}
+position: relative;
 `
 
 export const ModalNavListWrapper = styled.ul`
@@ -102,26 +93,28 @@ font-size: ${props => props.theme.fontSize.medium2};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.heavy};
 line-height: 1.2; /* 120% */
+& ::after {
+    content: "";
+    position: absolute;
+    flex-shrink: 0;
+    width: 902px;
+    height: 1px;
+    background-color: ${props => props.theme.colors.lightGrey};
+    bottom: -24px;
+    left: 0;
+}
 `
 
 export const NavItem = styled.li`
-& ::after {
+/* & ::after {
     content: "";
     flex-shrink: 0;
     width: 30;
     height: 4px;
     background-color: ${props => props.theme.colors.accent};
-}
+} */
 `
 
 export const ModalNavButton = styled.button`
-display: inline-block;
-
-& ::after {
-    content: "";
-    flex-shrink: 0;
-    width: 30;
-    height: 4px;
-    background-color: ${props => props.theme.colors.accent};
-}
+/* padding-bottom: 24px; */
 `

@@ -16,9 +16,10 @@ export function CardList({ list }) {
   const [page, setPage] = useState(1);
   const [isLoadMore, setIsLoadMore] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [data, setfirst] = useState([]);
 
   const dispatch = useDispatch();
-  const totalHits = useSelector(selectAll).length;
+  const totalHits = useSelector(selectAll);
 
   const handleOpenModal = data => {
     setShowModal(true);
@@ -35,16 +36,16 @@ export function CardList({ list }) {
   };
 
   useEffect(() => {
-    setIsLoading(true);
-    setIsLoadMore(page < Math.ceil(totalHits / 4) ? true : false);
-    !isLoadMore &&
-      toast.info('You got all advertise', {
-        autoClose: 2000,
-        theme: 'light',
-      });
+    // setIsLoading(true);
+    // setIsLoadMore(page < Math.ceil(totalHits / 4) ? true : false);
+    // !isLoadMore &&
+    //   toast.info('You got all advertise', {
+    //     autoClose: 2000,
+    //     theme: 'light',
+    //   });
     dispatch(getAdvertiseList(page));
-    setIsLoading(false);
-  }, [dispatch, totalHits, page, isLoadMore, isLoading]);
+    // setIsLoading(false);
+  }, [dispatch, page]);
 
   useEffect(() => {
     dispatch(getAll());

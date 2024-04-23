@@ -49,12 +49,20 @@ export function ModaCardInfo({ data, closeModal }) {
         <ModalNavWrapper>
           <ModalNavListWrapper>
             <NavItem>
-              <ModalNavButton type="button" onClick={() => setIsFeatures(true)}>
+              <ModalNavButton
+                type="button"
+                style={isFeatures ? { borderBottom: '5px solid red' } : { borderBottom: 'none' }}
+                onClick={() => setIsFeatures(true)}
+              >
                 Features
               </ModalNavButton>
             </NavItem>
             <NavItem>
-              <ModalNavButton type="button" onClick={() => setIsFeatures(false)}>
+              <ModalNavButton
+                type="button"
+                style={!isFeatures ? { borderBottom: '5px solid red' } : { borderBottom: 'none' }}
+                onClick={() => setIsFeatures(false)}
+              >
                 Reviews
               </ModalNavButton>
             </NavItem>
