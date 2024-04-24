@@ -22,10 +22,10 @@ export function HomeGallery() {
   return (
     <div>
       <GalleryList>
-        {cutGallery.map(({ gallery, name, _id }) => (
+        {cutGallery.map(({ gallery, form, _id, name }) => (
           <GalleryItem key={_id}>
             <ImageItem src={gallery[0]} alt={name} />
-            <NameCard>{name}</NameCard>
+            <NameCard>{form}</NameCard>
           </GalleryItem>
         ))}
       </GalleryList>

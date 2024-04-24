@@ -1,3 +1,4 @@
+import Button from 'components/Button/Button';
 import styled from 'styled-components';
 
 
@@ -23,4 +24,10 @@ display: flex;
 flex-direction: column;
 gap: 24px;
 align-items: center;
+`
+
+export const LoadMoreWrapper = styled.div`
+background-color: transparent;
+color: teal;
+
 `

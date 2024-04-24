@@ -1,4 +1,4 @@
-import Button from 'components/ShowMore/Button';
+import Button from 'components/Button/Button';
 import { FormData, FormWrapper, Text, Title } from './Form.styled';
 
 export function Form() {

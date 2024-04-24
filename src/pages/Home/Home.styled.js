@@ -9,7 +9,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 height: 100vh;
-padding-top: 90px;
+padding-top: 100px;
 
 `
 
@@ -54,6 +54,7 @@ justify-content: center;
 `
 export const NameWrapper = styled.div`
 display: flex;
+align-items: end;
 gap: 15px;
 width: 250px;
 `
@@ -70,7 +71,7 @@ line-height: 1.25; /* 125% */
 export const Position = styled.p`
 text-align: center;
 color: ${props => props.theme.colors.primary};
-font-size:  ${props => props.theme.fontSize.medium};;
+font-size:  ${props => props.theme.fontSize.small};;
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.medium};
 line-height: 1.25; /* 125% */
