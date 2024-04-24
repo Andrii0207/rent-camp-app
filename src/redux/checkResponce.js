@@ -3,6 +3,6 @@ export function checkResponse(
     nextState,
     key
 ) {
-    const idArr = nextState.map(item => item[key]);
-    return prevState.some(item => idArr.includes(item[key]));
+    const arrID = nextState.map(item => item[key]);
+    return prevState.some(item => arrID.includes(item[key]));
 };

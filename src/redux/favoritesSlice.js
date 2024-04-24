@@ -15,20 +15,6 @@ const favoritesSlice = createSlice({
         }
 
     },
-    extraReducers: builder => {
-        // builder
-        //     .addCase(getAdvertiseList.pending, (state, _) => {
-        //         state.isLoading = true;
-        //     })
-        //     .addCase(getAdvertiseList.fulfilled, (state, { payload }) => {
-        //         state.isLoading = false;
-        //         state.entity = payload;
-        //         state.error = null;
-        //     }).addCase(getAdvertiseList.rejected, (state, { payload }) => {
-        //         state.isLoading = false;
-        //         state.error = payload;
-        //     })
-    }
 })
 
 const persistConfig = {
