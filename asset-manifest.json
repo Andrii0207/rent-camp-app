@@ -1,17 +1,37 @@
 {
   "files": {
     "main.css": "/rent-camp-app/static/css/main.c4f6df17.css",
-    "main.js": "/rent-camp-app/static/js/main.63fd1239.js",
+    "main.js": "/rent-camp-app/static/js/main.3cf28438.js",
+    "static/media/flow.svg": "/rent-camp-app/static/media/flow.5295bec72ca3382ded3a3cfd6e344624.svg",
+    "static/media/logo.svg": "/rent-camp-app/static/media/logo.b297082118b3d7a400cfb36641574018.svg",
+    "static/media/bathroom.svg": "/rent-camp-app/static/media/bathroom.28b0782cdabd3d959aac97c3f7f5d529.svg",
+    "static/media/kids.svg": "/rent-camp-app/static/media/kids.5ce92f9b3f9bc03ab91939effa3d7ef7.svg",
+    "static/media/toilet.svg": "/rent-camp-app/static/media/toilet.ac77761601bb432278c568a1ff4fb7be.svg",
+    "static/media/adults.svg": "/rent-camp-app/static/media/adults.d8b3ce89bc7e4b355f8b3e0b12e5e3cd.svg",
+    "static/media/petrol.svg": "/rent-camp-app/static/media/petrol.ddccc9fd7d1daa1dd557f21293daf24c.svg",
+    "static/media/radio.svg": "/rent-camp-app/static/media/radio.c3f012bd34459ff2cdfc97c0e5e5ffda.svg",
+    "static/media/gas.svg": "/rent-camp-app/static/media/gas.69d05de5c12483e6db0eae52af28bee4.svg",
+    "static/media/airConditioner.svg": "/rent-camp-app/static/media/airConditioner.b3febf65e1c9925515d43b75564b6a76.svg",
+    "static/media/automatic.svg": "/rent-camp-app/static/media/automatic.88672a85f7fc72aaecaf32a54db1f6fa.svg",
+    "static/media/beds.svg": "/rent-camp-app/static/media/beds.c8300f838a7e4353d5359e1dbd95e56f.svg",
+    "static/media/hob.svg": "/rent-camp-app/static/media/hob.6b137ed490f8b79160c660fb6b75fb2e.svg",
+    "static/media/microwave.svg": "/rent-camp-app/static/media/microwave.9e545fce20499a2bd1edd2be1e4b2523.svg",
+    "static/media/freezer.svg": "/rent-camp-app/static/media/freezer.cc3b504ec8e74c63e7db444cce329b81.svg",
     "static/media/heart.svg": "/rent-camp-app/static/media/heart.9e81e402766cef2017387bf5c7724a9f.svg",
+    "static/media/kitchen.svg": "/rent-camp-app/static/media/kitchen.24f42eee61c16f424da60e22764e783f.svg",
     "index.html": "/rent-camp-app/index.html",
     "static/media/rating.svg": "/rent-camp-app/static/media/rating.3f8d1088ea677c645d66d61aeff411af.svg",
     "static/media/location.svg": "/rent-camp-app/static/media/location.1277d31ae4e4bbaeecf9ca1357337a74.svg",
+    "static/media/water.svg": "/rent-camp-app/static/media/water.649ccc3d473c87ae5c8a3a479df39b57.svg",
+    "static/media/cd.svg": "/rent-camp-app/static/media/cd.c1e819f2ce2c187140c0f8f67bd77e39.svg",
+    "static/media/tv.svg": "/rent-camp-app/static/media/tv.b25523be3d655d5450e3d6934e4c35e4.svg",
+    "static/media/shower.svg": "/rent-camp-app/static/media/shower.05af8c6bc3a293e1726fee6965f15268.svg",
     "static/media/close.svg": "/rent-camp-app/static/media/close.1420153b53523c32907c769335d89f17.svg",
     "main.c4f6df17.css.map": "/rent-camp-app/static/css/main.c4f6df17.css.map",
-    "main.63fd1239.js.map": "/rent-camp-app/static/js/main.63fd1239.js.map"
+    "main.3cf28438.js.map": "/rent-camp-app/static/js/main.3cf28438.js.map"
   },
   "entrypoints": [
     "static/css/main.c4f6df17.css",
-    "static/js/main.63fd1239.js"
+    "static/js/main.3cf28438.js"
   ]
 }
