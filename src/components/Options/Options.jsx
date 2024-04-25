@@ -1,32 +1,18 @@
-import { OptionItem, OptionList } from './Options.styled';
+import { Item, List } from './Options.styled';
+import { OptionItem } from './OptionItem';
+import { updateOptionsList } from 'helpers';
 
 export default function Options({ data }) {
-  const {
-    adults,
-    transmission,
-    engine,
-    details: { beds },
-  } = data;
+  const updatedOptons = updateOptionsList(data);
   return (
-    <OptionList>
-      <OptionItem>
-        <p>{adults} adults</p>
-      </OptionItem>
-      <OptionItem>
-        <p>{transmission}</p>
-      </OptionItem>
-      <OptionItem>
-        <p>{engine}</p>
-      </OptionItem>
-      <OptionItem>
-        <p> kitchen</p>
-      </OptionItem>
-      <OptionItem>
-        <p>{beds} beds</p>
-      </OptionItem>
-      <OptionItem>
-        <p> AC</p>
-      </OptionItem>
-    </OptionList>
+    <List>
+      {updatedOptons
+        .map(option => (
+          <Item key={option.key}>
+            <OptionItem options={option} />
+          </Item>
+        ))
+        .slice(0, 10)}
+    </List>
   );
 }

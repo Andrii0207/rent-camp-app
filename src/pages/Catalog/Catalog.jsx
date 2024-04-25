@@ -1,4 +1,4 @@
-import { Container, LoadMore, LoadMoreWrapper, MainWrapper, Wrapper } from './Catalog.styled';
+import { Container, LoadMoreWrapper, MainWrapper, Wrapper } from './Catalog.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';

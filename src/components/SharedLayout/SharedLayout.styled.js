@@ -10,7 +10,7 @@ stroke-width: 2px;
 margin-left: 15px;
 `
 
-export const Title = styled.a`
+export const LogoLink = styled.a`
 color: ${props => props.theme.colors.accent};
 font-size: 36px;
 font-style: ${props => props.theme.fontStyle.normal};
@@ -19,6 +19,7 @@ line-height: 1.25; /* 125% */
 letter-spacing: 1%;
 display: flex;
 align-items: center;
+justify-content: center;
 `
 
 export const SpanTitle = styled.span`

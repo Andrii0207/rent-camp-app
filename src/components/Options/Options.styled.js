@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 
-export const OptionList = styled.ul`
+export const List = styled.ul`
 display: flex;
 flex-wrap: wrap;
 align-items: center;
@@ -9,7 +9,9 @@ gap: 8px;
 margin-bottom: 24px;
 `
 
-export const OptionItem = styled.li`
+export const Item = styled.li`
+display: flex;
+column-gap: 8px;
 padding: 12px 18px;
 border-radius: 100px;
 background: ${props => props.theme.colors.whiteCold};

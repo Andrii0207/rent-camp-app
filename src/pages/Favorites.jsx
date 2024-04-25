@@ -6,8 +6,6 @@ import { List, Text } from './Favorites.styles';
 export function Favorites() {
   const favoritList = useSelector(selectFavorites);
 
-  console.log('favoritList >>', favoritList.length);
-
   return (
     <List>
       {favoritList.length !== 0 ? <CardList list={favoritList} /> : <Text>Opps, your favorite is empty 🙊 </Text>}

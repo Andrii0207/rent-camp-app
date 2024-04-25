@@ -21,9 +21,8 @@ import { ReactComponent as CloseIcon } from '../../images/icons/close.svg';
 
 export function ModaCardInfo({ data, closeModal }) {
   const [isFeatures, setIsFeatures] = useState(true);
-
   const { gallery, description, price } = data;
-  console.log('ModaCardInfo reviews>>', data);
+
   return (
     <>
       <ModalWrapper>

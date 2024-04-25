@@ -10,6 +10,8 @@ export function ConsumerFeedBack({ data: { comment, reviewer_name, reviewer_rati
     size: 16,
   };
 
+
+
   return (
     <>
       <TitleWrapper>

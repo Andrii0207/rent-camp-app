@@ -5,10 +5,10 @@ import {
   HeaderList,
   HeaderNav,
   IconWrapper,
+  LogoLink,
   MenuItem,
   SpanTitle,
   StyledLink,
-  Title,
 } from './SharedLayout.styled';
 import { ReactComponent as LogoIcon } from '../../images/icons/logo.svg';
 
@@ -17,12 +17,12 @@ export function SharedLayout() {
     <Container>
       <Header>
         <HeaderNav>
-          <Title href="./">
+          <LogoLink href="./">
             Camp <SpanTitle>Rent</SpanTitle>
             <IconWrapper>
               <LogoIcon />
             </IconWrapper>
-          </Title>
+          </LogoLink>
           <HeaderList>
             <MenuItem>
               <StyledLink to="/">Home</StyledLink>

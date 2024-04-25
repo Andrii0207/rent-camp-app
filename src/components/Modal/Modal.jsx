@@ -6,7 +6,6 @@ import { ModaCardInfo } from 'components/ModaCardInfo/ModaCardInfo';
 const modalRoot = document.querySelector('#modal-root');
 
 export function Modal({ closeModal, modalData }) {
-  console.log('Modal >>', modalData);
   useEffect(() => {
     const handlePressESC = e => {
       if (e.code === 'Escape') {

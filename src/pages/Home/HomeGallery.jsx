@@ -17,7 +17,6 @@ export function HomeGallery() {
   }
 
   const cutGallery = totalHits.slice(0, totalHits.length - 1);
-  console.log(cutGallery);
 
   return (
     <div>
