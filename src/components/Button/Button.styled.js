@@ -34,5 +34,5 @@ border-color: ${props => props.theme.colors.accent};
 }
 `
 export const Search = styled(StyledButton)`
-padding: 16px 60px;
+padding: 16px 40px;
 `
