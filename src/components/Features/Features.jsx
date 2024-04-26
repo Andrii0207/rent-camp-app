@@ -8,7 +8,7 @@ export function Features({ data }) {
     <ContainerWrapper>
       <div>
         <OptionsWrapper>
-          <Options data={data} />
+          <Options data={data} length="10" />
         </OptionsWrapper>
         <div>
           <VehicleDetails data={data} />

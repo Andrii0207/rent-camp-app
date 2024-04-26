@@ -2,7 +2,7 @@ import { Item, List } from './Options.styled';
 import { OptionItem } from './OptionItem';
 import { updateOptionsList } from 'helpers';
 
-export default function Options({ data }) {
+export default function Options({ data, length }) {
   const updatedOptons = updateOptionsList(data);
   return (
     <List>
@@ -12,7 +12,7 @@ export default function Options({ data }) {
             <OptionItem options={option} />
           </Item>
         ))
-        .slice(0, 10)}
+        .slice(0, length)}
     </List>
   );
 }

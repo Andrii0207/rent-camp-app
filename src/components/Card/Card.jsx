@@ -46,7 +46,7 @@ export default function Card({ item, openModal }) {
             </PriceWrapper>
           </TitleCommonWrapper>
           <Description text={description} />
-          <Options data={item} />
+          <Options data={item} length="6" />
           <Button data={item} action={openModal}>
             Show More
           </Button>

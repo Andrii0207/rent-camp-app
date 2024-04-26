@@ -19,7 +19,7 @@ export function Filters() {
       </ImputWrapper>
       <FilterOptions />
 
-      <Button type="button" action={getFilterData}>
+      <Button type="button" action={getFilterData} isLoadMore={false}>
         Search
       </Button>
     </Container>

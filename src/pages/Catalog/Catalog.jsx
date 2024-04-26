@@ -1,4 +1,4 @@
-import { Container, LoadMoreWrapper, MainWrapper, Wrapper } from './Catalog.styled';
+import { CardListWrapper, Container, LoadMoreWrapper, MainWrapper, Wrapper } from './Catalog.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -58,18 +58,21 @@ export function Catalog() {
         {isLoading && <Spinner />}
         <Container>
           <Filters />
-          <Wrapper>
-            <CardList list={adverts} handleOpenModal={handleOpenModal} />
-          </Wrapper>
+          <CardListWrapper>
+            <Wrapper>
+              <CardList list={adverts} handleOpenModal={handleOpenModal} />
+            </Wrapper>
+            {isShownButtonLoadMore && (
+              <LoadMoreWrapper>
+                <Button action={handleLoadMore} isLoadMore={true}>
+                  Load more
+                </Button>
+              </LoadMoreWrapper>
+            )}
+          </CardListWrapper>
         </Container>
+
         {isShowModal && <Modal closeModal={handleCloseModal} modalData={modalData} />}
-        {isShownButtonLoadMore && (
-          <LoadMoreWrapper>
-            <Button action={handleLoadMore} page={page}>
-              Load more
-            </Button>
-          </LoadMoreWrapper>
-        )}
       </MainWrapper>
     </>
   );
