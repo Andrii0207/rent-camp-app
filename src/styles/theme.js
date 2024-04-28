@@ -9,8 +9,6 @@ export const theme = Object.freeze({
         yellow: "#FFC531",
         darkGrey: '#475467',
         lightGrey: 'rgba(16, 24, 40, 0.20)',
-        mainBackground: ['linear-gradient(to top, #0f2027, #203a43, #2c5364)'],
-        imageBackground: ['red', 'linear-gradient (90deg, #ff9966,#ff5e62'],
     },
     fontSize: {
         small: '14px',
@@ -30,12 +28,4 @@ export const theme = Object.freeze({
     fontStyle: {
         normal: "normal",
     },
-    breakpoints: {
-        xs: '320px',
-        s: '768px',
-        m: '1024px',
-        l: '1280px',
-        xl: '1440px',
-    },
-
 })
