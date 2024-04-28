@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rent-camp-app/static/css/main.c4f6df17.css",
-    "main.js": "/rent-camp-app/static/js/main.be0b117b.js",
+    "main.js": "/rent-camp-app/static/js/main.aa3abdb0.js",
     "static/media/flow.svg": "/rent-camp-app/static/media/flow.5295bec72ca3382ded3a3cfd6e344624.svg",
     "static/media/logo.svg": "/rent-camp-app/static/media/logo.b297082118b3d7a400cfb36641574018.svg",
     "static/media/bathroom.svg": "/rent-camp-app/static/media/bathroom.28b0782cdabd3d959aac97c3f7f5d529.svg",
@@ -14,12 +14,12 @@
     "static/media/airConditioner.svg": "/rent-camp-app/static/media/airConditioner.b3febf65e1c9925515d43b75564b6a76.svg",
     "static/media/automatic.svg": "/rent-camp-app/static/media/automatic.88672a85f7fc72aaecaf32a54db1f6fa.svg",
     "static/media/beds.svg": "/rent-camp-app/static/media/beds.c8300f838a7e4353d5359e1dbd95e56f.svg",
+    "index.html": "/rent-camp-app/index.html",
     "static/media/hob.svg": "/rent-camp-app/static/media/hob.6b137ed490f8b79160c660fb6b75fb2e.svg",
     "static/media/microwave.svg": "/rent-camp-app/static/media/microwave.9e545fce20499a2bd1edd2be1e4b2523.svg",
     "static/media/freezer.svg": "/rent-camp-app/static/media/freezer.cc3b504ec8e74c63e7db444cce329b81.svg",
     "static/media/heart.svg": "/rent-camp-app/static/media/heart.9e81e402766cef2017387bf5c7724a9f.svg",
     "static/media/kitchen.svg": "/rent-camp-app/static/media/kitchen.24f42eee61c16f424da60e22764e783f.svg",
-    "index.html": "/rent-camp-app/index.html",
     "static/media/rating.svg": "/rent-camp-app/static/media/rating.3f8d1088ea677c645d66d61aeff411af.svg",
     "static/media/location.svg": "/rent-camp-app/static/media/location.1277d31ae4e4bbaeecf9ca1357337a74.svg",
     "static/media/water.svg": "/rent-camp-app/static/media/water.649ccc3d473c87ae5c8a3a479df39b57.svg",
@@ -28,10 +28,10 @@
     "static/media/shower.svg": "/rent-camp-app/static/media/shower.05af8c6bc3a293e1726fee6965f15268.svg",
     "static/media/close.svg": "/rent-camp-app/static/media/close.1420153b53523c32907c769335d89f17.svg",
     "main.c4f6df17.css.map": "/rent-camp-app/static/css/main.c4f6df17.css.map",
-    "main.be0b117b.js.map": "/rent-camp-app/static/js/main.be0b117b.js.map"
+    "main.aa3abdb0.js.map": "/rent-camp-app/static/js/main.aa3abdb0.js.map"
   },
   "entrypoints": [
     "static/css/main.c4f6df17.css",
-    "static/js/main.be0b117b.js"
+    "static/js/main.aa3abdb0.js"
   ]
 }
