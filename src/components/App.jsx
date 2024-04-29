@@ -1,10 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home, Catalog, Favorites } from 'pages';
+import { lazy } from 'react';
 import { SharedLayout } from 'components';
 import { Features } from './Features/Features';
 import { Reviews } from './Reviews/Reviews';
 import { ToastContainer } from 'react-toastify';
-import { NotFound } from '../pages/NotFound/NotFound';
+
+const Favorites = lazy(() => import('pages/Favorites/Favorites'));
+const Home = lazy(() => import('pages/Home/Home'));
+const Catalog = lazy(() => import('pages/Catalog/Catalog'));
+const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 
 export const App = () => {
   return (

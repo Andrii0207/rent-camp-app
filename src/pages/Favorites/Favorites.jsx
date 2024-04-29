@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
-import { selectFavorites } from '../redux/selectors';
 import { CardList } from 'components/CardList/CardList';
 import { List, Text } from './Favorites.styles';
+import { selectFavorites } from '../../redux/selectors';
 
-export function Favorites() {
+export default function Favorites() {
   const favoritList = useSelector(selectFavorites);
 
   return (

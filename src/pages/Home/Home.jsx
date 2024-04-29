@@ -13,9 +13,9 @@ import {
 } from './Home.styled';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
-import { HomeGallery } from '../Home/HomeGallery';
+import { HomeGallery } from './HomeGallery';
 
-export function Home() {
+export default function Home() {
   return (
     <Container>
       <MainSection>

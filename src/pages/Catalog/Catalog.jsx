@@ -11,7 +11,7 @@ import { CardList } from 'components/CardList/CardList';
 import Button from 'components/Button/Button';
 import { Modal } from 'components/Modal/Modal';
 
-export function Catalog() {
+export default function Catalog() {
   const [isShowModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState('');
   const [page, setPage] = useState(1);
