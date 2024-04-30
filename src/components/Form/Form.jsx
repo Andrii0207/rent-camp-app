@@ -13,13 +13,13 @@ export function Form() {
       <Text>Stay connected! We are always ready to help you.</Text>
       <FormData>
         <div>
-          <Input type="text" name="name" placeholder="Name" />
+          <Input type="text" name="name" placeholder="Name" required />
         </div>
         <div>
-          <Input type="email" name="email" placeholder="Email" />
+          <Input type="email" name="email" placeholder="Email" required />
         </div>
         <InputWrapper>
-          <Input type="text" name="booking-date" placeholder="Booking date" />
+          <Input type="text" name="booking-date" placeholder="Booking date" required />
           <IconWrapper>
             <Calendar />
           </IconWrapper>
