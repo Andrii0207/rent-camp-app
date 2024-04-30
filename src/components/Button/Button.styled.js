@@ -14,6 +14,7 @@ font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.medium};
 line-height: 1.5; /* 150% */
 letter-spacing: -0.08px;
+transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 
 &:hover,
 &:focus {
