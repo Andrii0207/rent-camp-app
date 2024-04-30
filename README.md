@@ -21,10 +21,14 @@
 * Install dependencies using `npm install`.
 * Start the development server using `npm start`.
 
+  ### Feedback
+- author: [Andrii Popov](https://github.com/Andrii0207/rent-camp-app "project link")
+- In case of questions please contact [Popov.Andrey80@gmail.com]
 
 ### Desing
 Design of the project from [layout](https://www.figma.com/file/fnMWH0eBB7NnoqdAiiKWsQ/Test?type=design&node-id=0-1&mode=design "Figma link")
 
-  ### Feedback
-- author: [Andrii Popov](https://github.com/Andrii0207/rent-camp-app "project link")
-- In case of questions please contact [Popov.Andrey80@gmail.com]
+![Catalog page](./assets/catalog_page.png)
+![Modal](./assets/modal.png)
+![Reviews](./assets/reviews.png)
+![Favorites page](./assets/favorites_page.png)
