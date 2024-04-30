@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rent-camp-app/static/css/main.5f5be0b1.css",
-    "main.js": "/rent-camp-app/static/js/main.faf921a0.js",
+    "main.js": "/rent-camp-app/static/js/main.381cc47d.js",
     "static/css/549.6895386c.chunk.css": "/rent-camp-app/static/css/549.6895386c.chunk.css",
     "static/js/549.ba4d9e5f.chunk.js": "/rent-camp-app/static/js/549.ba4d9e5f.chunk.js",
     "static/js/874.defccc7e.chunk.js": "/rent-camp-app/static/js/874.defccc7e.chunk.js",
@@ -43,7 +43,7 @@
     "static/media/kitchen2.svg": "/rent-camp-app/static/media/kitchen2.9949761499dd5580e0fc725988170644.svg",
     "static/media/close.svg": "/rent-camp-app/static/media/close.1420153b53523c32907c769335d89f17.svg",
     "main.5f5be0b1.css.map": "/rent-camp-app/static/css/main.5f5be0b1.css.map",
-    "main.faf921a0.js.map": "/rent-camp-app/static/js/main.faf921a0.js.map",
+    "main.381cc47d.js.map": "/rent-camp-app/static/js/main.381cc47d.js.map",
     "549.6895386c.chunk.css.map": "/rent-camp-app/static/css/549.6895386c.chunk.css.map",
     "549.ba4d9e5f.chunk.js.map": "/rent-camp-app/static/js/549.ba4d9e5f.chunk.js.map",
     "874.defccc7e.chunk.js.map": "/rent-camp-app/static/js/874.defccc7e.chunk.js.map",
@@ -55,6 +55,6 @@
   },
   "entrypoints": [
     "static/css/main.5f5be0b1.css",
-    "static/js/main.faf921a0.js"
+    "static/js/main.381cc47d.js"
   ]
 }
