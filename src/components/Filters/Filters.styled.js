@@ -20,33 +20,27 @@ width: 360px;
 height: 56px;
 padding-left: 44px;
 border-radius: 10px;
+border: 1px solid transparent;
+outline-color: transparent;
+outline-offset: 4px;
 background-color: ${props => props.theme.colors.whiteWarm};
-/* color: ${props => props.theme.colors.darkGrey}; */
 font-size: ${props => props.theme.fontSize.medium};
 font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.normal};
 line-height: 1.25; /* 125% */
-
-outline-color: transparent;
-outline-offset: 4px;
 cursor: pointer;
-border: 1px solid transparent;
 transition: border-color, color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-
 &::placeholder {
     transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 &:focus {
     border-color: ${props => props.theme.colors.lightGrey};
     outline-color: transparent;
     outline-offset: 4px;
-    
     &::placeholder {
     color: ${props => props.theme.colors.lightGrey};
+    }
 }
-}
-
 `
 export const SpanIcon = styled.span`
 position: absolute;

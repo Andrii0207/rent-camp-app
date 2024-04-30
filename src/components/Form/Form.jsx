@@ -1,5 +1,6 @@
 import Button from 'components/Button/Button';
-import { FormData, FormWrapper, Text, Title } from './Form.styled';
+import { FormData, FormWrapper, IconWrapper, Input, InputWrapper, Text, TextAria, Title } from './Form.styled';
+import { ReactComponent as Calendar } from '../../images/icons/calendar.svg';
 
 export function Form() {
   const getFormData = () => {
@@ -10,8 +11,23 @@ export function Form() {
     <FormWrapper>
       <Title>Book your campervan now</Title>
       <Text>Stay connected! We are always ready to help you.</Text>
-      <FormData></FormData>
-
+      <FormData>
+        <div>
+          <Input type="text" name="name" placeholder="Name" />
+        </div>
+        <div>
+          <Input type="email" name="email" placeholder="Email" />
+        </div>
+        <InputWrapper>
+          <Input type="text" name="booking-date" placeholder="Booking date" />
+          <IconWrapper>
+            <Calendar />
+          </IconWrapper>
+        </InputWrapper>
+        <div>
+          <TextAria name="text" id="" cols="30" rows="10" placeholder="Comment"></TextAria>
+        </div>
+      </FormData>
       <Button type="submit" action={getFormData}>
         Send
       </Button>

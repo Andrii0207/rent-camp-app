@@ -10,6 +10,7 @@ export const theme = Object.freeze({
         yellow: "#FFC531",
         darkGrey: '#475467',
         lightGrey: 'rgba(16, 24, 40, 0.20)',
+        lightGrey2: 'rgba(16, 24, 40, 0.60)',
     },
     fontSize: {
         small: '14px',

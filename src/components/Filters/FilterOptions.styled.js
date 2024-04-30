@@ -61,7 +61,6 @@ width: calc((100% - 2 * 10px) / 3);
 transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 &:hover {
 border-color: ${props => props.theme.colors.accent};
-
 }
 `
 export const ButtonOption = styled.button`
@@ -71,7 +70,6 @@ justify-content: center;
 align-items: center;
 width: 112px;
 height: 95px;
-
 `
 export const WrapperIcon = styled.span`
 display: flex;
@@ -80,7 +78,6 @@ align-items: center;
 justify-content: center;
 width: 32px;
 height: 32px;
-
 stroke: ${props => props.theme.colors.primary};
 text-align: center;
 font-size: ${props => props.theme.fontSize.medium};
