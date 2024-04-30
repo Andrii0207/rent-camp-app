@@ -101,8 +101,13 @@ export const IconWrapper = styled.span`
 position: absolute;
 top: 50%;
 right: 18px;
+cursor: pointer;
 transform: translateY(-50%);
 stroke: ${props => props.theme.colors.primary};
+&:hover,
+&:focus {
+    stroke: ${props => props.theme.colors.accent};
+}
 `
 export const StyledButton = styled.button`
 display: flex;
@@ -116,6 +121,7 @@ font-style: ${props => props.theme.fontStyle.normal};
 font-weight: ${props => props.theme.fontWeight.medium};
 line-height: 1.5; /* 150% */
 letter-spacing: -0.08px;
+transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 &:hover,
 &:focus {
 background-color: ${props => props.theme.colors.accent};
